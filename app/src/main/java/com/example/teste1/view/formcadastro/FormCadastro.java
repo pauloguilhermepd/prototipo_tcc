@@ -7,19 +7,19 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.teste1.R;
-import com.example.teste1.databinding.ActivityFormaCadastroBinding;
+import com.example.teste1.databinding.ActivityFormCadastroBinding;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class FormaCadastro extends AppCompatActivity {
-    private ActivityFormaCadastroBinding binding;
+public class FormCadastro extends AppCompatActivity {
+    private ActivityFormCadastroBinding binding;
     private FirebaseAuth auth  = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_forma_cadastro);
-        binding = ActivityFormaCadastroBinding.inflate(getLayoutInflater());
+        setContentView(R.layout.activity_form_cadastro);
+        binding = ActivityFormCadastroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.btnCadastrar.setOnClickListener(view -> {

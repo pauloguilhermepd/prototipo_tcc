@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teste1">
         <activity
-            android:name=".view.formcadastro.FormaCadastro"
+            android:name=".view.formcadastro.FormCadastro"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
