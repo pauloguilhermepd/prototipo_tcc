@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">teste1</string>
+    <string name="app_name">teste!</string>
     <string name="titulo_form_cadastro">Cadastre-se</string>
     <string name="hint_email">Email</string>
     <string name="hint_senha">Senha</string>
     <string name="txt_btn_cadastrar">Cadastrar</string>
+    <string name="txt_login">Não possui uma conta? Cadastre-se</string>
 
 </resources>

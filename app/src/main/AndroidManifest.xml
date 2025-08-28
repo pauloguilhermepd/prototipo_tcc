@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teste1">
         <activity
+            android:name=".view.formlogin.FormLogin"
+            android:exported="false" />
+        <activity
             android:name=".view.formcadastro.FormCadastro"
             android:exported="true">
             <intent-filter>

@@ -31,6 +31,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="20dp"
         android:maxLines="1"
+        android:autofillHints="emailAddress"
         android:inputType="textEmailAddress"
         />
 
@@ -44,6 +45,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
+        android:autofillHints="password"
         android:maxLines="1"
         android:inputType="numberPassword"
         />
@@ -63,6 +65,19 @@
         android:padding="15dp"
         android:layout_margin="20dp"
         />
+
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:text="@string/txt_login"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
 
 </LinearLayout>
