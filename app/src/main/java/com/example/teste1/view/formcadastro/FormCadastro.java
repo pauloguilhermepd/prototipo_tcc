@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 public class FormCadastro extends AppCompatActivity {
     private ActivityFormCadastroBinding binding;
-    private FirebaseAuth auth  = FirebaseAuth.getInstance();
+    private final FirebaseAuth auth  = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

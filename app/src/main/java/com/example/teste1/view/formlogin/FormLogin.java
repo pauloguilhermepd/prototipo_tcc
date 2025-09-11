@@ -6,15 +6,11 @@ import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.R;
 import com.example.teste1.databinding.ActivityFormLoginBinding;
 import com.example.teste1.view.formcadastro.FormCadastro;
 import com.example.teste1.view.telaprincipal.TelaPrincipal;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 
 public class FormLogin extends AppCompatActivity {
     private ActivityFormLoginBinding binding;
-    private FirebaseAuth auth = FirebaseAuth.getInstance();
+    private final FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
