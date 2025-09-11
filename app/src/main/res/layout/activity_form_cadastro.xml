@@ -21,7 +21,7 @@
         />
 
     <EditText
-        android:id="@+id/edit_email"
+        android:id="@+id/edit_email_cadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_email"
@@ -36,7 +36,7 @@
         />
 
     <EditText
-        android:id="@+id/edit_senha"
+        android:id="@+id/edit_senha_cadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/hint_senha"
@@ -73,7 +73,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_marginStart="50dp"
-        android:text="@string/txt_login"
+        android:text="@string/txt_link_login"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="15sp"
