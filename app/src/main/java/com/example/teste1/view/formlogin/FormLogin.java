@@ -3,6 +3,8 @@ package com.example.teste1.view.formlogin;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,15 +12,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.teste1.R;
 import com.example.teste1.databinding.ActivityFormLoginBinding;
 import com.example.teste1.view.formcadastro.FormCadastro;
-import com.example.teste1.view.telaprincipal.TelaPrincipal;
+import com.example.teste1.view.telaprincipal.FormRegistro;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
 
+import org.w3c.dom.Text;
+
 public class FormLogin extends AppCompatActivity {
-    private ActivityFormLoginBinding binding;
+
     private final FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
@@ -26,18 +30,23 @@ public class FormLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_form_login);
-        binding = ActivityFormLoginBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
 
-        binding.txtLinkCadastrar.setOnClickListener(view -> {
+        //Chamanda as views
+        TextView txtLinkCadastrar = findViewById(R.id.txt_link_cadastrar);
+        TextView editEmailLogin = findViewById(R.id.edit_email_login);
+        TextView editSenhaLogin = findViewById(R.id.edit_senha_login);
+        Button btnEntrar = findViewById(R.id.btn_entrar);
+
+        txtLinkCadastrar.setOnClickListener(view -> {
             Intent intent = new Intent(FormLogin.this, FormCadastro.class);
             startActivity(intent);
             finish();
         });
 
-        binding.btnEntrar.setOnClickListener(view -> {
-            String email = binding.editEmailLogin.getText().toString();
-            String senha = binding.editSenhaLogin.getText().toString();
+
+        btnEntrar.setOnClickListener(view -> {
+            String email = editEmailLogin.getText().toString();
+            String senha = editSenhaLogin.getText().toString();
 
             if(email.isEmpty() || senha.isEmpty()){
                 Snackbar snackbar = Snackbar.make(view, "Preencha todos os campos", Snackbar.LENGTH_SHORT);
@@ -46,7 +55,7 @@ public class FormLogin extends AppCompatActivity {
             }else{
                 auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener(login -> {
                     if(login.isSuccessful()){
-                        Intent intent = new Intent(FormLogin.this, TelaPrincipal.class);
+                        Intent intent = new Intent(FormLogin.this, FormRegistro.class);
                         startActivity(intent);
                         finish();
                     }

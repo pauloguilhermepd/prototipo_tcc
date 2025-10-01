@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.teste1.R;
 import com.example.teste1.databinding.ActivityFormCadastroBinding;
 import com.example.teste1.view.formlogin.FormLogin;
-import com.example.teste1.view.telaprincipal.TelaPrincipal;
+import com.example.teste1.view.telaprincipal.FormRegistro;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.FirebaseAuth;
@@ -47,7 +47,7 @@ public class FormCadastro extends AppCompatActivity {
                 auth.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(cadastro -> {
                     if(cadastro.isSuccessful()){
 
-                        Intent intent = new Intent(FormCadastro.this, TelaPrincipal.class);
+                        Intent intent = new Intent(FormCadastro.this, FormRegistro.class);
                         startActivity(intent);
                         finish();
                     }

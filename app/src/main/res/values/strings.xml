@@ -8,5 +8,18 @@
     <string name="txt_link_login">Já possui uma conta? Entre</string>
     <string name="txt_btn_entrar">Entrar</string>
     <string name="titulo_form_login">Entre</string>
+    <string name="titulo_form_registro">Bem vindo ao  FitMatch!</string>
+    <string name="txt_nome_completo_registro">Nome Completo:</string>
+    <string name="txt_data_nascimento">Data de Nascimento:</string>
+    <string name="txt_biografia">Biografia:</string>
+    <string name="txt_pronomes">Pronomes:</string>
+    <string name="txt_prosseguir">Prosseguir</string>
+    <string-array name="lista_pronomes">
+        <item>Ele/Dele</item>
+        <item>Ela/Dela</item>
+        <item>Elu/Delu</item>
+        <item>Outro</item>
+    </string-array>
+
 
 </resources>
