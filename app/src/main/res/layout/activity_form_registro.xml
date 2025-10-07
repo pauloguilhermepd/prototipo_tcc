@@ -126,21 +126,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"/>
 
-    <EditText
-        android:id="@+id/edit_pronomes_registro"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/light_grey"
-        android:padding="10dp"
-        android:maxLines="1"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:autofillHints="name"
-        android:inputType="text"
-        />
     <Button
+        android:id="@+id/btn_prosseguir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="15dp"
@@ -149,7 +136,7 @@
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:text="@string/txt_prosseguir"
-        android:textSize="20dp"
+        android:textSize="20sp"
         />
 
 

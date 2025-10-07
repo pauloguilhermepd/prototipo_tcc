@@ -21,11 +21,9 @@ public interface ApiService {
             @Field("pronomes") String pronomes
     );
 
-    // === PUBLICAÇÕES ===
     @GET("listar_publicacoes.php")
     Call<List<Publicacao>> listarPublicacoes();
 
-    // === COMENTÁRIOS ===
     @FormUrlEncoded
     @POST("registrar_comentario.php")
     Call<Void> registrarComentario(
