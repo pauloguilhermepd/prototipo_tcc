@@ -12,7 +12,7 @@ import retrofit2.http.Field;
 import retrofit2.http.Query;
 public interface ApiService {
     @FormUrlEncoded
-    @POST("registrar_perfil.php")
+    @POST("registrar_usuario.php")
     Call<Void> registrarPerfil(
             @Field("uid") String uid,
             @Field("nome") String nome,
