@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_form_registro.xml",
+        "source": "com.example.teste1.app-main-52:/layout/activity_form_registro.xml"
+    },
+    {
+        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_form_cadastro.xml",
+        "source": "com.example.teste1.app-main-52:/layout/activity_form_cadastro.xml"
+    },
+    {
+        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_form_login.xml",
+        "source": "com.example.teste1.app-main-52:/layout/activity_form_login.xml"
+    }
+]
