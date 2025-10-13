@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:1-36:12
 MERGED from [androidx.databinding:viewbinding:8.12.3] C:\Users\Paulo\.gradle\caches\8.13\transforms\c212e49c96cf46399e4a801abac8c441\transformed\viewbinding-8.12.3\AndroidManifest.xml:2:1-7:12
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\a4072f541e3b6da7236223a65d56741d\transformed\firebase-ui-auth-9.0.0\AndroidManifest.xml:2:1-117:12
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\e471be44ea7f3b71ef6f694afc8e6a71\transformed\firebase-analytics-23.0.0\AndroidManifest.xml:2:1-9:12
@@ -103,9 +103,29 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\Paulo\.gradle\c
 		INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:5:5-67
+MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\a4072f541e3b6da7236223a65d56741d\transformed\firebase-ui-auth-9.0.0\AndroidManifest.xml:9:5-67
+MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\a4072f541e3b6da7236223a65d56741d\transformed\firebase-ui-auth-9.0.0\AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-auth:24.0.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\7eb25024f342fa4bfc2b8de0578d9a7f\transformed\firebase-auth-24.0.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:24.0.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\7eb25024f342fa4bfc2b8de0578d9a7f\transformed\firebase-auth-24.0.1\AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.gms:play-services-measurement:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\773600613fcad5d210c2aa097f07995b\transformed\play-services-measurement-23.0.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\773600613fcad5d210c2aa097f07995b\transformed\play-services-measurement-23.0.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\452fee5eacc624f5efe94e051bf131dc\transformed\play-services-measurement-impl-23.0.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\452fee5eacc624f5efe94e051bf131dc\transformed\play-services-measurement-impl-23.0.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\dcd86bc64b3f2439254e2a1f8f947cd0\transformed\play-services-measurement-api-23.0.0\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\dcd86bc64b3f2439254e2a1f8f947cd0\transformed\play-services-measurement-api-23.0.0\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\39ca8ef3aace66efea72d22055df46ba\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\39ca8ef3aace66efea72d22055df46ba\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
+MERGED from [com.google.firebase:firebase-installations:19.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\f695d36ac4b2129979160c755446606e\transformed\firebase-installations-19.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.firebase:firebase-installations:19.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\f695d36ac4b2129979160c755446606e\transformed\firebase-installations-19.0.0\AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\b43c165fbd1d9813b9295de83ef1da6f\transformed\play-services-measurement-sdk-api-23.0.0\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\b43c165fbd1d9813b9295de83ef1da6f\transformed\play-services-measurement-sdk-api-23.0.0\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:5:22-64
 application
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:5:5-31:19
-INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:5:5-31:19
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:7:5-34:19
+INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:7:5-34:19
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\a4072f541e3b6da7236223a65d56741d\transformed\firebase-ui-auth-9.0.0\AndroidManifest.xml:23:5-115:19
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\a4072f541e3b6da7236223a65d56741d\transformed\firebase-ui-auth-9.0.0\AndroidManifest.xml:23:5-115:19
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\e471be44ea7f3b71ef6f694afc8e6a71\transformed\firebase-analytics-23.0.0\AndroidManifest.xml:7:5-20
@@ -179,69 +199,55 @@ MERGED from [com.google.android.play:core-common:2.0.3] C:\Users\Paulo\.gradle\c
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\02debd6c818e93813a357b3655ad3d12\transformed\core-1.13.1\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:13:9-35
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:12:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:10:9-54
 	android:roundIcon
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:12:9-54
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:13:9-54
 	android:icon
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:14:9-44
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:15:9-44
 	android:dataExtractionRules
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:8:9-65
-activity#com.example.teste1.view.telaprincipal.FormRegistro
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:15:9-17:40
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:9:9-65
+activity#com.example.teste1.view.formestilo.FormEstilo
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:16:9-18:40
 	android:exported
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:17:13-37
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:16:13-60
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:17:13-55
+activity#com.example.teste1.view.formregistro.FormRegistro
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:20:13-59
 activity#com.example.teste1.view.formlogin.FormLogin
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:18:9-20:40
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:20:13-37
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:19:13-53
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:23:13-53
 activity#com.example.teste1.view.formcadastro.FormCadastro
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:21:9-29:20
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:25:9-33:20
 	android:exported
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:23:13-36
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:22:13-59
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:26:13-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:27:27-74
-uses-permission#android.permission.INTERNET
-ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:32:5-67
-MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\a4072f541e3b6da7236223a65d56741d\transformed\firebase-ui-auth-9.0.0\AndroidManifest.xml:9:5-67
-MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\a4072f541e3b6da7236223a65d56741d\transformed\firebase-ui-auth-9.0.0\AndroidManifest.xml:9:5-67
-MERGED from [com.google.firebase:firebase-auth:24.0.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\7eb25024f342fa4bfc2b8de0578d9a7f\transformed\firebase-auth-24.0.1\AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-auth:24.0.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\7eb25024f342fa4bfc2b8de0578d9a7f\transformed\firebase-auth-24.0.1\AndroidManifest.xml:25:5-67
-MERGED from [com.google.android.gms:play-services-measurement:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\773600613fcad5d210c2aa097f07995b\transformed\play-services-measurement-23.0.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\773600613fcad5d210c2aa097f07995b\transformed\play-services-measurement-23.0.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\452fee5eacc624f5efe94e051bf131dc\transformed\play-services-measurement-impl-23.0.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\452fee5eacc624f5efe94e051bf131dc\transformed\play-services-measurement-impl-23.0.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\dcd86bc64b3f2439254e2a1f8f947cd0\transformed\play-services-measurement-api-23.0.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\dcd86bc64b3f2439254e2a1f8f947cd0\transformed\play-services-measurement-api-23.0.0\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\39ca8ef3aace66efea72d22055df46ba\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] C:\Users\Paulo\.gradle\caches\8.13\transforms\39ca8ef3aace66efea72d22055df46ba\transformed\recaptcha-18.6.1\AndroidManifest.xml:7:5-67
-MERGED from [com.google.firebase:firebase-installations:19.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\f695d36ac4b2129979160c755446606e\transformed\firebase-installations-19.0.0\AndroidManifest.xml:8:5-67
-MERGED from [com.google.firebase:firebase-installations:19.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\f695d36ac4b2129979160c755446606e\transformed\firebase-installations-19.0.0\AndroidManifest.xml:8:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\b43c165fbd1d9813b9295de83ef1da6f\transformed\play-services-measurement-sdk-api-23.0.0\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:23.0.0] C:\Users\Paulo\.gradle\caches\8.13\transforms\b43c165fbd1d9813b9295de83ef1da6f\transformed\play-services-measurement-sdk-api-23.0.0\AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:32:22-64
+		ADDED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml:31:27-74
 uses-sdk
 INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Paulo\Documents\teste1\app\src\main\AndroidManifest.xml

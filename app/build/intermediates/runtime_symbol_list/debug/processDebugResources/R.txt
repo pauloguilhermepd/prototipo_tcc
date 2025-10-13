@@ -3838,6 +3838,7 @@ int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_form_cadastro 0x7f0c001c
+int layout activity_form_estilo 0x7f0c0093
 int layout activity_form_login 0x7f0c001d
 int layout activity_form_registro 0x7f0c001e
 int layout browser_actions_context_menu_page 0x7f0c001f

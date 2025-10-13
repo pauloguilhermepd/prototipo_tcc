@@ -1,14 +1,18 @@
 [
     {
-        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_form_registro.xml",
-        "source": "com.example.teste1.app-main-52:/layout/activity_form_registro.xml"
+        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_form_estilo.xml",
+        "source": "com.example.teste1.app-main-52:/layout/activity_form_estilo.xml"
     },
     {
-        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_form_cadastro.xml",
-        "source": "com.example.teste1.app-main-52:/layout/activity_form_cadastro.xml"
+        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-mergeDebugResources-49:\\layout\\activity_form_registro.xml",
+        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\layout\\activity_form_registro.xml"
     },
     {
-        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_form_login.xml",
-        "source": "com.example.teste1.app-main-52:/layout/activity_form_login.xml"
+        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-mergeDebugResources-49:\\layout\\activity_form_cadastro.xml",
+        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\layout\\activity_form_cadastro.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-mergeDebugResources-49:\\layout\\activity_form_login.xml",
+        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\layout\\activity_form_login.xml"
     }
 ]

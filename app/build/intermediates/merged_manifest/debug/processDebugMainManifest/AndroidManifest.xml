@@ -48,7 +48,10 @@
         android:testOnly="true"
         android:theme="@style/Theme.Teste1" >
         <activity
-            android:name="com.example.teste1.view.telaprincipal.FormRegistro"
+            android:name="com.example.teste1.view.formestilo.FormEstilo"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teste1.view.formregistro.FormRegistro"
             android:exported="false" />
         <activity
             android:name="com.example.teste1.view.formlogin.FormLogin"

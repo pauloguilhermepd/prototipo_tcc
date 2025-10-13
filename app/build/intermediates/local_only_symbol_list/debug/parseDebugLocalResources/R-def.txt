@@ -24,6 +24,7 @@ id spin_pronomes
 id txt_link_cadastrar
 id txt_login
 layout activity_form_cadastro
+layout activity_form_estilo
 layout activity_form_login
 layout activity_form_registro
 mipmap ic_launcher

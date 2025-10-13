@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.teste1.R;
 import com.example.teste1.databinding.ActivityFormCadastroBinding;
 import com.example.teste1.view.formlogin.FormLogin;
-import com.example.teste1.view.telaprincipal.FormRegistro;
+import com.example.teste1.view.formregistro.FormRegistro;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.FirebaseAuth;

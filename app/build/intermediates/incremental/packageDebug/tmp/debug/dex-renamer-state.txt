@@ -1,9 +1,9 @@
-#Wed Oct 08 19:53:42 BRT 2025
+#Thu Oct 09 18:51:00 BRT 2025
 base.0=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
 base.3=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
-base.4=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\2\\classes.dex
+base.4=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
 base.5=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.6=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
 base.7=C\:\\Users\\Paulo\\Documents\\teste1\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
@@ -12,7 +12,7 @@ path.0=classes.dex
 path.1=0/classes.dex
 path.2=10/classes.dex
 path.3=12/classes.dex
-path.4=2/classes.dex
+path.4=5/classes.dex
 path.5=4/classes.dex
 path.6=8/classes.dex
 path.7=classes2.dex

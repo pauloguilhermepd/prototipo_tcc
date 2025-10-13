@@ -3839,6 +3839,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_form_cadastro
+layout activity_form_estilo
 layout activity_form_login
 layout activity_form_registro
 layout browser_actions_context_menu_page

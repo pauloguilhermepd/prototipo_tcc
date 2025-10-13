@@ -10,16 +10,13 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.teste1.R;
-import com.example.teste1.databinding.ActivityFormLoginBinding;
 import com.example.teste1.view.formcadastro.FormCadastro;
-import com.example.teste1.view.telaprincipal.FormRegistro;
+import com.example.teste1.view.formregistro.FormRegistro;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthInvalidUserException;
-
-import org.w3c.dom.Text;
 
 public class FormLogin extends AppCompatActivity {
 
