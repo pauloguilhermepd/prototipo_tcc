@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+array lista_estilos
 array lista_pronomes
 color black
 color light_grey
@@ -10,6 +11,7 @@ drawable icons8_usuario_24
 drawable icons8_usuario_48
 drawable icons8_usuario_96
 id btn_cadastrar
+id btn_continuar
 id btn_entrar
 id btn_prosseguir
 id edit_bio_registro
@@ -19,7 +21,9 @@ id edit_email_login
 id edit_nome_registro
 id edit_senha_cadastro
 id edit_senha_login
+id edit_subestilo
 id main
+id spin_estilos
 id spin_pronomes
 id txt_link_cadastrar
 id txt_login
@@ -27,6 +31,8 @@ layout activity_form_cadastro
 layout activity_form_estilo
 layout activity_form_login
 layout activity_form_registro
+layout activity_tela_perfil
+layout activity_tela_principal
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
@@ -39,17 +45,21 @@ string hint_email
 string hint_senha
 string project_id
 string titulo_form_cadastro
+string titulo_form_estilo
 string titulo_form_login
 string titulo_form_registro
 string txt_biografia
 string txt_btn_cadastrar
 string txt_btn_entrar
+string txt_continuar
 string txt_data_nascimento
+string txt_info_subestilo
 string txt_link_cadastrar
 string txt_link_login
 string txt_nome_completo_registro
 string txt_pronomes
 string txt_prosseguir
+string txt_subestilo
 style Base.Theme.Teste1
 style Theme.Teste1
 xml backup_rules

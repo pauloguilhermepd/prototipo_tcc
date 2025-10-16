@@ -78,6 +78,7 @@ int animator mtrl_fab_hide_motion_spec 0x7f02001e
 int animator mtrl_fab_show_motion_spec 0x7f02001f
 int animator mtrl_fab_transformation_sheet_collapse_spec 0x7f020020
 int animator mtrl_fab_transformation_sheet_expand_spec 0x7f020021
+int array lista_estilos 0x7f030001
 int array lista_pronomes 0x7f030000
 int attr SharedValue 0x7f040000
 int attr SharedValueId 0x7f040001
@@ -3254,6 +3255,7 @@ int id browser_actions_menu_item_text 0x7f090067
 int id browser_actions_menu_items 0x7f090068
 int id browser_actions_menu_view 0x7f090069
 int id btn_cadastrar 0x7f09006a
+int id btn_continuar 0x7f09023e
 int id btn_entrar 0x7f09006b
 int id btn_holder 0x7f09006c
 int id btn_prosseguir 0x7f09006d
@@ -3353,6 +3355,7 @@ int id edit_phone_number 0x7f0900ca
 int id edit_query 0x7f0900cb
 int id edit_senha_cadastro 0x7f0900cc
 int id edit_senha_login 0x7f0900cd
+int id edit_subestilo 0x7f09023f
 int id edit_text_id 0x7f0900ce
 int id elastic 0x7f0900cf
 int id email 0x7f0900d0
@@ -3618,6 +3621,7 @@ int id snapMargins 0x7f0901d3
 int id south 0x7f0901d4
 int id spacer 0x7f0901d5
 int id special_effects_controller_view_tag 0x7f0901d6
+int id spin_estilos 0x7f090240
 int id spin_pronomes 0x7f0901d7
 int id spline 0x7f0901d8
 int id split_action_bar 0x7f0901d9
@@ -3841,6 +3845,8 @@ int layout activity_form_cadastro 0x7f0c001c
 int layout activity_form_estilo 0x7f0c0093
 int layout activity_form_login 0x7f0c001d
 int layout activity_form_registro 0x7f0c001e
+int layout activity_tela_perfil 0x7f0c0094
+int layout activity_tela_principal 0x7f0c0095
 int layout browser_actions_context_menu_page 0x7f0c001f
 int layout browser_actions_context_menu_row 0x7f0c0020
 int layout custom_dialog 0x7f0c0021
@@ -4259,17 +4265,21 @@ int string side_sheet_accessibility_pane_title 0x7f110125
 int string side_sheet_behavior 0x7f110126
 int string status_bar_notification_info_overflow 0x7f110127
 int string titulo_form_cadastro 0x7f110128
+int string titulo_form_estilo 0x7f110134
 int string titulo_form_login 0x7f110129
 int string titulo_form_registro 0x7f11012a
 int string txt_biografia 0x7f11012b
 int string txt_btn_cadastrar 0x7f11012c
 int string txt_btn_entrar 0x7f11012d
+int string txt_continuar 0x7f110135
 int string txt_data_nascimento 0x7f11012e
+int string txt_info_subestilo 0x7f110136
 int string txt_link_cadastrar 0x7f11012f
 int string txt_link_login 0x7f110130
 int string txt_nome_completo_registro 0x7f110131
 int string txt_pronomes 0x7f110132
 int string txt_prosseguir 0x7f110133
+int string txt_subestilo 0x7f110137
 int style AlertDialog_AppCompat 0x7f120000
 int style AlertDialog_AppCompat_Light 0x7f120001
 int style Animation_AppCompat_Dialog 0x7f120002

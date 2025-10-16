@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teste1">
         <activity
+            android:name=".view.telas_usuario.TelaPerfil"
+            android:exported="false" />
+        <activity
+            android:name=".view.telas_usuario.TelaPrincipal"
+            android:exported="false" />
+        <activity
             android:name=".view.formestilo.FormEstilo"
             android:exported="false" />
         <activity

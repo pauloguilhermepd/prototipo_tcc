@@ -97,7 +97,7 @@ public class FormRegistro extends AppCompatActivity {
                     public void onResponse(Call<RespostaRegistroPerfil> call, Response<RespostaRegistroPerfil> response) {
                         if(response.isSuccessful()) {
                             RespostaRegistroPerfil resposta = response.body();
-                            int idPerfil = resposta.getId_perfil_usuario();
+                            String idPerfil = resposta.getId_perfil_usuario();
                             String status = resposta.getStatus();
 
                             Log.d("Api", "Status: " + status + " | ID: " + idPerfil);

@@ -3,7 +3,8 @@ import com.example.teste1.view.models.Comentario;
 import com.example.teste1.view.models.Publicacao;
 
 
-import com.example.teste1.view.models.RespostasRegistros.RespostaRegistroUsuarioEstilo;
+import com.example.teste1.view.models.RespostasRegistros.RegistroPerfilEstilo;
+import com.example.teste1.view.models.RespostasRegistros.RespostaRegistroEstilo;
 import com.example.teste1.view.models.RespostasRegistros.RespostaRegistroPerfil;
 
 import java.util.List;
@@ -32,16 +33,24 @@ public interface ApiService {
     @POST("registrar_comentario.php")
     Call<Void> registrarComentario(
             @Field("id_publicacoes") int idPublicacoes,
-            @Field("id_usuario") int idUsuario,
+            @Field("id_usuario") String idUsuario,
             @Field("comentarios") String comentarios
     );
 
     @FormUrlEncoded
-    @POST("registrar_usuario_estilo.php")
-    Call<RespostaRegistroUsuarioEstilo> registrar_usuario_estilo(
-            @Field("id_estilo") int idEstilo,
-            @Field("id_perfil_usuario") int idPerfilUsuario
+    @POST("registrar_estilo.php")
+    Call<RespostaRegistroEstilo> registrar_estilo(
+            @Field("estilo") String estilo,
+            @Field("sub_estilo") String subEstilo
 
+    );
+
+    @FormUrlEncoded
+    @POST("registrar_usuario_estilo.php")
+    Call<RegistroPerfilEstilo> registrarUsuarioEstilo(
+            @Field("estilo") String estilo,
+            @Field("sub_estilo") String subEstilo,
+            @Field("id_perfil_usuario") String idPerfilUsuario
     );
 
     @GET("listar_comentarios.php")

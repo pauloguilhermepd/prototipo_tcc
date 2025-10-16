@@ -1,7 +1,9 @@
 package com.example.teste1.view.formestilo;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -19,10 +21,16 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.teste1.R;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
+import com.example.teste1.view.models.RespostasRegistros.RegistroPerfilEstilo;
+import com.example.teste1.view.models.RespostasRegistros.RespostaRegistroEstilo;
+import com.example.teste1.view.telas_usuario.TelaPerfil;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+
+import retrofit2.*;
 
 public class FormEstilo extends AppCompatActivity {
-    private String pronomeSelecionado;
+    private String estiloSelecionado;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -44,39 +52,85 @@ public class FormEstilo extends AppCompatActivity {
         spin_estilos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                pronomeSelecionado = parent.getItemAtPosition(position).toString();
+                estiloSelecionado = parent.getItemAtPosition(position).toString();
                 String teste1 = parent.getItemAtPosition(position).toString();
-                Log.d("Registro", "Pronome escolhido: " + pronomeSelecionado);
-                if(pronomeSelecionado.endsWith("e")){
-                    pronomeSelecionado = "E";
-                }if(pronomeSelecionado.endsWith("a")){
-                    pronomeSelecionado = "A";
-                }if(pronomeSelecionado.endsWith("u")){
-                    pronomeSelecionado = "U";
-                }else{
-                    pronomeSelecionado = "O";
-                }
+                Log.d("Registro", "Estilo escolhido: " + estiloSelecionado);
+
 
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                pronomeSelecionado = "";
+                estiloSelecionado = "";
             }
         });
 
 
 
         btn_continuar.setOnClickListener(view -> {
-            String subestilo = edt_subestilo.toString();
-            if(subestilo.isEmpty() || pronomeSelecionado.isEmpty()){
+            String subestilo = edt_subestilo.getText().toString();
+            if(subestilo.isEmpty() || estiloSelecionado.isEmpty()){
                 Snackbar snackbar = Snackbar.make(view, "Preencha todos os campos", Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(Color.RED);
                 snackbar.show();
             }
             else{
                 ApiService api = ApiClient.getClient().create(ApiService.class);
-                Call<RepostaRegistroUsuarioEstilo> call = api.registrarEstilo(id_estilo, id)
+                Call<RespostaRegistroEstilo> call = api.registrar_estilo(estiloSelecionado, subestilo);
+
+                call.enqueue(new Callback<RespostaRegistroEstilo>() {
+                    @Override
+                    public void onResponse(Call<RespostaRegistroEstilo> call, Response<RespostaRegistroEstilo> response) {
+                        if(response.isSuccessful()){
+                            RespostaRegistroEstilo resposta = response.body();
+
+                            String status = resposta.getStatus();
+
+                            String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                            Call<RegistroPerfilEstilo> call1 = api.registrarUsuarioEstilo(estiloSelecionado, subestilo, uid);
+                            call1.enqueue(new Callback<RegistroPerfilEstilo>() {
+                                @Override
+                                public void onResponse(Call<RegistroPerfilEstilo> call, Response<RegistroPerfilEstilo> response) {
+                                    if(response.isSuccessful()){
+                                        Log.d("Api", "Status: " + status);
+                                        Snackbar snackbar = Snackbar.make(view, "Estilo registrado com sucesso!", Snackbar.LENGTH_SHORT);
+                                        snackbar.setBackgroundTint(Color.GREEN);
+                                        snackbar.show();
+
+                                        Intent intent = new Intent(FormEstilo.this, TelaPerfil.class);
+                                        startActivity(intent);
+                                        finish();
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Call<RegistroPerfilEstilo> call, Throwable t) {
+                                    Log.e("API", "Erro: registro de perfil e estilo");
+                                }
+                            });
+
+
+                        }
+                        else {
+                            Log.e("API", "Erro: resposta nula ou inválida");
+
+                            Snackbar snackbar = Snackbar.make(view, "Erro ao registrar estilo", Snackbar.LENGTH_SHORT);
+                            snackbar.setBackgroundTint(Color.RED);
+                            snackbar.show();
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<RespostaRegistroEstilo> call, Throwable t) {
+                        Log.e("API", "Falha na requisição: " + t.getMessage());
+
+                        Snackbar snackbar = Snackbar.make(view, "Falha: " + t.getMessage(), Snackbar.LENGTH_SHORT);
+                        snackbar.setBackgroundTint(Color.RED);
+                        snackbar.show();
+                    }
+                });
+
             }
         });
     }

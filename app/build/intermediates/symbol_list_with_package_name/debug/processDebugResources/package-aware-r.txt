@@ -79,6 +79,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array lista_estilos
 array lista_pronomes
 attr SharedValue
 attr SharedValueId
@@ -3255,6 +3256,7 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_cadastrar
+id btn_continuar
 id btn_entrar
 id btn_holder
 id btn_prosseguir
@@ -3354,6 +3356,7 @@ id edit_phone_number
 id edit_query
 id edit_senha_cadastro
 id edit_senha_login
+id edit_subestilo
 id edit_text_id
 id elastic
 id email
@@ -3619,6 +3622,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id spin_estilos
 id spin_pronomes
 id spline
 id split_action_bar
@@ -3842,6 +3846,8 @@ layout activity_form_cadastro
 layout activity_form_estilo
 layout activity_form_login
 layout activity_form_registro
+layout activity_tela_perfil
+layout activity_tela_principal
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -4260,17 +4266,21 @@ string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
 string titulo_form_cadastro
+string titulo_form_estilo
 string titulo_form_login
 string titulo_form_registro
 string txt_biografia
 string txt_btn_cadastrar
 string txt_btn_entrar
+string txt_continuar
 string txt_data_nascimento
+string txt_info_subestilo
 string txt_link_cadastrar
 string txt_link_login
 string txt_nome_completo_registro
 string txt_pronomes
 string txt_prosseguir
+string txt_subestilo
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
