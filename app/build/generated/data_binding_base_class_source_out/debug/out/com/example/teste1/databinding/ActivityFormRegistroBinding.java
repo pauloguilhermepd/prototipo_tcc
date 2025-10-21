@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.teste1.R;
+import de.hdodenhof.circleimageview.CircleImageView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -23,6 +24,9 @@ public final class ActivityFormRegistroBinding implements ViewBinding {
 
   @NonNull
   public final Button btnProsseguir;
+
+  @NonNull
+  public final CircleImageView cimFotoPerfil;
 
   @NonNull
   public final EditText editBioRegistro;
@@ -40,11 +44,12 @@ public final class ActivityFormRegistroBinding implements ViewBinding {
   public final Spinner spinPronomes;
 
   private ActivityFormRegistroBinding(@NonNull LinearLayout rootView, @NonNull Button btnProsseguir,
-      @NonNull EditText editBioRegistro, @NonNull EditText editDataRegistro,
-      @NonNull EditText editNomeRegistro, @NonNull LinearLayout main,
-      @NonNull Spinner spinPronomes) {
+      @NonNull CircleImageView cimFotoPerfil, @NonNull EditText editBioRegistro,
+      @NonNull EditText editDataRegistro, @NonNull EditText editNomeRegistro,
+      @NonNull LinearLayout main, @NonNull Spinner spinPronomes) {
     this.rootView = rootView;
     this.btnProsseguir = btnProsseguir;
+    this.cimFotoPerfil = cimFotoPerfil;
     this.editBioRegistro = editBioRegistro;
     this.editDataRegistro = editDataRegistro;
     this.editNomeRegistro = editNomeRegistro;
@@ -85,6 +90,12 @@ public final class ActivityFormRegistroBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.cim_foto_perfil;
+      CircleImageView cimFotoPerfil = ViewBindings.findChildViewById(rootView, id);
+      if (cimFotoPerfil == null) {
+        break missingId;
+      }
+
       id = R.id.edit_bio_registro;
       EditText editBioRegistro = ViewBindings.findChildViewById(rootView, id);
       if (editBioRegistro == null) {
@@ -111,7 +122,7 @@ public final class ActivityFormRegistroBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityFormRegistroBinding((LinearLayout) rootView, btnProsseguir,
+      return new ActivityFormRegistroBinding((LinearLayout) rootView, btnProsseguir, cimFotoPerfil,
           editBioRegistro, editDataRegistro, editNomeRegistro, main, spinPronomes);
     }
     String missingId = rootView.getResources().getResourceName(id);

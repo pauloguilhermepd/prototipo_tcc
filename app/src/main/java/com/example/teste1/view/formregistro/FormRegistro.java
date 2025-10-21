@@ -2,6 +2,7 @@ package com.example.teste1.view.formregistro;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -9,7 +10,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
+import android.provider.MediaStore;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+
+import java.io.File;
+
+import de.hdodenhof.circleimageview.CircleImageView;
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
+import okhttp3.ResponseBody;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,8 +42,21 @@ import retrofit2.Response;
 
 public class FormRegistro extends AppCompatActivity {
     private String pronomeSelecionado = "";
+    private Uri uriFotoSelecionada;
+
+    private String getRealPathFromURI(Uri uri) {
+        String[] proj = {MediaStore.Images.Media.DATA};
+        android.content.CursorLoader loader = new android.content.CursorLoader(this, uri, proj, null, null, null);
+        android.database.Cursor cursor = loader.loadInBackground();
+        int column_index = cursor.getColumnIndexOrThrow(MediaStore.Images.Media.DATA);
+        cursor.moveToFirst();
+        String result = cursor.getString(column_index);
+        cursor.close();
+        return result;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_form_registro);
@@ -39,6 +65,20 @@ public class FormRegistro extends AppCompatActivity {
         EditText edit_data_aniversario = findViewById(R.id.edit_data_registro);
         EditText edit_bio = findViewById(R.id.edit_bio_registro);
         Button btn_prosseguir = findViewById(R.id.btn_prosseguir);
+        CircleImageView imgPreview = findViewById(R.id.cim_foto_perfil);
+
+        ActivityResultLauncher<String> escolherImagem = registerForActivityResult(
+                new ActivityResultContracts.GetContent(),
+                uri -> {
+                    if (uri != null) {
+                        uriFotoSelecionada = uri;
+                        imgPreview.setImageURI(uri);
+                    }
+                }
+        );
+
+        imgPreview.setOnClickListener(view -> escolherImagem.launch("image/*"));
+
 
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
@@ -78,18 +118,28 @@ public class FormRegistro extends AppCompatActivity {
             String data_aniver = edit_data_aniversario.getText().toString();
             String bio = edit_bio.getText().toString();
 
-            if(nome.isEmpty() || data_aniver.isEmpty() || bio.isEmpty() || pronomeSelecionado.isEmpty()){
+            if(nome.isEmpty() || data_aniver.isEmpty() || bio.isEmpty() || pronomeSelecionado.isEmpty() || uriFotoSelecionada == null){
                 Snackbar snackbar = Snackbar.make(view, "Preencha todos os campos", Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(Color.RED);
                 snackbar.show();
             }
             else{
-
-
                 String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+                File file = new File(getRealPathFromURI(uriFotoSelecionada));
+
+                RequestBody fotoBody = RequestBody.create(MediaType.parse("image/*"), file);
+                
+                MultipartBody.Part fotoPart = MultipartBody.Part.createFormData("foto_perfil", file.getName(), fotoBody);
+
+                RequestBody uidBody = RequestBody.create(MediaType.parse("text/plain"), uid);
+                RequestBody nomeBody = RequestBody.create(MediaType.parse("text/plain"), nome);
+                RequestBody dataBody = RequestBody.create(MediaType.parse("text/plain"), data_aniver);
+                RequestBody bioBody = RequestBody.create(MediaType.parse("text/plain"), bio);
+                RequestBody pronomeBody = RequestBody.create(MediaType.parse("text/plain"), pronomeSelecionado);
+
                 ApiService api = ApiClient.getClient().create(ApiService.class);
-                Call<RespostaRegistroPerfil> call = api.registrarPerfil(uid, nome, data_aniver, bio, pronomeSelecionado);
+                Call<RespostaRegistroPerfil> call = api.registrarPerfil(uidBody, nomeBody, dataBody, bioBody, pronomeBody, fotoPart);
 
 
                 call.enqueue(new Callback<RespostaRegistroPerfil>() {

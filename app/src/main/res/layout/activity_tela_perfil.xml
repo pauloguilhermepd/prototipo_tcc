@@ -1,10 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".view.telas_usuario.TelaPerfil">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cim_foto_perfil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icons8_mais_100"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:scaleType="centerCrop"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/black"
+
+        />
+
+    <TextView
+        android:id="@+id/tp_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Usuário"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+    <!-- Pronome -->
+    <TextView
+        android:id="@+id/tp_pronome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Pronome"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Biografia -->
+    <TextView
+        android:id="@+id/tp_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aqui vai a biografia do usuário, descrevendo um pouco sobre ele..."
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp" />
+
+
+
+
+
+
+</LinearLayout>

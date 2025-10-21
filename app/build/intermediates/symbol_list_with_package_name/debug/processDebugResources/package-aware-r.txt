@@ -3070,6 +3070,8 @@ drawable ic_other_sign_in
 drawable ic_passkey
 drawable ic_password
 drawable ic_search_black_24
+drawable icons8_mais_100
+drawable icons8_mais_50
 drawable icons8_usuario_24
 drawable icons8_usuario_48
 drawable icons8_usuario_96
@@ -3283,6 +3285,7 @@ id chains
 id checkbox
 id checked
 id chronometer
+id cim_foto_perfil
 id circle_center
 id clear_text
 id clip_horizontal
@@ -4274,6 +4277,7 @@ string txt_btn_cadastrar
 string txt_btn_entrar
 string txt_continuar
 string txt_data_nascimento
+string txt_foto_perfil
 string txt_info_subestilo
 string txt_link_cadastrar
 string txt_link_login

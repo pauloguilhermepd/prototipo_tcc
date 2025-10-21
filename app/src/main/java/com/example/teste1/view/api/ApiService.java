@@ -1,7 +1,9 @@
 package com.example.teste1.view.api;
 import com.example.teste1.view.models.Comentario;
 import com.example.teste1.view.models.Publicacao;
-
+import okhttp3.MediaType;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 
 import com.example.teste1.view.models.RespostasRegistros.RegistroPerfilEstilo;
 import com.example.teste1.view.models.RespostasRegistros.RespostaRegistroEstilo;
@@ -10,20 +12,17 @@ import com.example.teste1.view.models.RespostasRegistros.RespostaRegistroPerfil;
 import java.util.List;
 
 import retrofit2.Call;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.POST;
-import retrofit2.http.GET;
-import retrofit2.http.Field;
-import retrofit2.http.Query;
+import retrofit2.http.*;
 public interface ApiService {
-    @FormUrlEncoded
+    @Multipart
     @POST("registrar_usuario.php")
     Call<RespostaRegistroPerfil> registrarPerfil(
-            @Field("uid") String uid,
-            @Field("nome") String nome,
-            @Field("data_nascimento") String dataNascimento,
-            @Field("biografia") String biografia,
-            @Field("pronomes") String pronomes
+            @Part("uid") RequestBody uid,
+            @Part("nome") RequestBody nome,
+            @Part("data_nascimento") RequestBody dataNascimento,
+            @Part("biografia") RequestBody biografia,
+            @Part("pronomes") RequestBody pronomes,
+            @Part MultipartBody.Part fotoPerfil
     );
 
     @GET("listar_publicacoes.php")

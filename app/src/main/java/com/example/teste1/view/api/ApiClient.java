@@ -13,7 +13,7 @@ public class ApiClient {
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl("https:abby-unbeaued-tyron.ngrok-free.dev/testeapi_php/")
+                    .baseUrl("https://abby-unbeaued-tyron.ngrok-free.dev/testeapi_php/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }

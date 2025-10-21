@@ -3069,6 +3069,8 @@ int drawable ic_other_sign_in 0x7f0800ba
 int drawable ic_passkey 0x7f0800bb
 int drawable ic_password 0x7f0800bc
 int drawable ic_search_black_24 0x7f0800bd
+int drawable icons8_mais_100 0x7f08010d
+int drawable icons8_mais_50 0x7f08010e
 int drawable icons8_usuario_24 0x7f0800be
 int drawable icons8_usuario_48 0x7f0800bf
 int drawable icons8_usuario_96 0x7f0800c0
@@ -3282,6 +3284,7 @@ int id chains 0x7f090081
 int id checkbox 0x7f090082
 int id checked 0x7f090083
 int id chronometer 0x7f090084
+int id cim_foto_perfil 0x7f090241
 int id circle_center 0x7f090085
 int id clear_text 0x7f090086
 int id clip_horizontal 0x7f090087
@@ -4273,6 +4276,7 @@ int string txt_btn_cadastrar 0x7f11012c
 int string txt_btn_entrar 0x7f11012d
 int string txt_continuar 0x7f110135
 int string txt_data_nascimento 0x7f11012e
+int string txt_foto_perfil 0x7f110138
 int string txt_info_subestilo 0x7f110136
 int string txt_link_cadastrar 0x7f11012f
 int string txt_link_login 0x7f110130
