@@ -14,15 +14,12 @@ import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.R;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
-import com.example.teste1.view.models.RespostasRegistros.RegistroPerfilEstilo;
-import com.example.teste1.view.models.RespostasRegistros.RespostaRegistroEstilo;
+import com.example.teste1.view.RespostasRegistros.RegistroPerfilEstilo;
+import com.example.teste1.view.RespostasRegistros.RespostaRegistroEstilo;
 import com.example.teste1.view.telas_usuario.TelaPerfil;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,6 +37,9 @@ public class FormEstilo extends AppCompatActivity {
         Spinner spin_estilos = findViewById(R.id.spin_estilos);
         EditText edt_subestilo = findViewById(R.id.edit_subestilo);
         Button btn_continuar = findViewById(R.id.btn_continuar);
+
+        Intent intent = getIntent();
+        String idPerfilUsuario = intent.getStringExtra("id_perfil_usuario");
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,
@@ -88,7 +88,7 @@ public class FormEstilo extends AppCompatActivity {
 
                             String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-                            Call<RegistroPerfilEstilo> call1 = api.registrarUsuarioEstilo(estiloSelecionado, subestilo, uid);
+                            Call<RegistroPerfilEstilo> call1 = api.registrarUsuarioEstilo(estiloSelecionado, subestilo, idPerfilUsuario);
                             call1.enqueue(new Callback<RegistroPerfilEstilo>() {
                                 @Override
                                 public void onResponse(Call<RegistroPerfilEstilo> call, Response<RegistroPerfilEstilo> response) {

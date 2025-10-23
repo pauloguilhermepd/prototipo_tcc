@@ -3689,6 +3689,9 @@ int id topPanel 0x7f090213
 int id top_level_view 0x7f090214
 int id top_progress_bar 0x7f090215
 int id touch_outside 0x7f090216
+int id tp_bio 0x7f090242
+int id tp_nome 0x7f090243
+int id tp_pronome 0x7f090244
 int id transitionToEnd 0x7f090217
 int id transitionToStart 0x7f090218
 int id transition_current_scene 0x7f090219

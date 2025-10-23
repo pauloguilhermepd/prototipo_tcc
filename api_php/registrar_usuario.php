@@ -1,19 +1,33 @@
 <?php
-include("conexao.php");
+header('Content-Type: application/json');
+include 'conexao.php';
 
-$uid = $_POST['uid'];
-$nome = $_POST['nome'];
-$data_nascimento = $_POST['data_nascimento'];
-$biografia = $_POST['biografia'];
-$pronomes = $_POST['pronomes'];
+error_reporting(0); // evita quebrar JSON
 
+$uid = $_REQUEST['uid'] ?? '';
+$nome = $_REQUEST['nome'] ?? '';
+$data = $_REQUEST['data_aniver'] ?? '';
+$bio = $_REQUEST['bio'] ?? '';
+$pronome = $_REQUEST['pronome'] ?? '';
 
-$sql = "INSERT INTO perfil_usuario (firebase_uid, nome_completo, data_nascimento, biografia, pronomes) 
-        VALUES ('$uid', '$nome', '$data_nascimento', '$biografia', '$pronomes')";
-
-if ($conn->query($sql) === TRUE) {
-    echo json_encode(["status" => "ok", "mensagem" => "Usuário registrado"]);
+if (isset($_FILES['foto_perfil'])) {
+    $fotoNome = $_FILES['foto_perfil']['name'];
+    $fotoTmp = $_FILES['foto_perfil']['tmp_name'];
+    $destino = "uploads/" . uniqid() . "_" . basename($fotoNome);
+    move_uploaded_file($fotoTmp, $destino);
 } else {
-    echo json_encode(["status" => "erro", "mensagem" => $conn->error]);
+    $destino = "uploads/default.png";
 }
+
+$stmt = $conn->prepare("INSERT INTO perfil_usuario (id_perfil_usuario, nome_completo, data_nascimento, biografia, pronomes, foto_perfil)
+                        VALUES (?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("ssssss", $uid, $nome, $data, $bio, $pronome, $destino);
+
+if ($stmt->execute()) {
+    echo json_encode(["status" => "success", "id_perfil_usuario" => $conn->insert_id]);
+} else {
+    echo json_encode(["status" => "error", "message" => $stmt->error]);
+}
+
 ?>
+

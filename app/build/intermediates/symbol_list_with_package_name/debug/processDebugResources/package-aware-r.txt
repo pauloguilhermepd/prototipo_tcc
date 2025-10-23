@@ -3690,6 +3690,9 @@ id topPanel
 id top_level_view
 id top_progress_bar
 id touch_outside
+id tp_bio
+id tp_nome
+id tp_pronome
 id transitionToEnd
 id transitionToStart
 id transition_current_scene

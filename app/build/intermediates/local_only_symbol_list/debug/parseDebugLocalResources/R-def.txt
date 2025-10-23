@@ -28,6 +28,9 @@ id edit_subestilo
 id main
 id spin_estilos
 id spin_pronomes
+id tp_bio
+id tp_nome
+id tp_pronome
 id txt_link_cadastrar
 id txt_login
 layout activity_form_cadastro

@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\layout\\activity_tela_principal.xml"
     },
     {
-        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_form_registro.xml",
-        "source": "com.example.teste1.app-main-52:/layout/activity_form_registro.xml"
-    },
-    {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-mergeDebugResources-49:\\layout\\activity_form_registro.xml",
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\layout\\activity_form_registro.xml"
+    },
+    {
+        "merged": "com.example.teste1.app-mergeDebugResources-49:/layout/activity_tela_perfil.xml",
+        "source": "com.example.teste1.app-main-52:/layout/activity_tela_perfil.xml"
     },
     {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-mergeDebugResources-49:\\layout\\activity_form_estilo.xml",

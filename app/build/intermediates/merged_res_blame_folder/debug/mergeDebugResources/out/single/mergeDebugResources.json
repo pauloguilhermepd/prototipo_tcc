@@ -4,24 +4,24 @@
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\drawable\\ic_launcher_background.xml"
-    },
-    {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\mipmap-hdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\drawable\\ic_launcher_foreground.xml"
-    },
-    {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\drawable_icons8_usuario_48.png.flat",
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\drawable\\icons8_usuario_48.png"
+    },
+    {
+        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\drawable\\ic_launcher_foreground.xml"
     },
     {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -36,12 +36,12 @@
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\layout\\activity_tela_principal.xml"
     },
     {
-        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\drawable_icons8_usuario_96.png.flat",
-        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\drawable\\icons8_usuario_96.png"
-    },
-    {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\drawable_icons8_usuario_96.png.flat",
+        "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\drawable\\icons8_usuario_96.png"
     },
     {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -92,16 +92,16 @@
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.teste1.app-debug-50:/layout_activity_form_registro.xml.flat",
-        "source": "com.example.teste1.app-main-52:/layout/activity_form_registro.xml"
-    },
-    {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-main-52:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.teste1.app-debug-50:/layout_activity_tela_perfil.xml.flat",
+        "source": "com.example.teste1.app-main-52:/layout/activity_tela_perfil.xml"
     },
     {
         "merged": "C:\\Users\\Paulo\\.gradle\\daemon\\8.13\\com.example.teste1.app-debug-50:\\mipmap-anydpi-v26_ic_launcher.xml.flat",

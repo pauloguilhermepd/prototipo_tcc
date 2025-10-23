@@ -10,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Spinner;
 import android.provider.MediaStore;
 import androidx.activity.result.ActivityResultLauncher;
@@ -22,7 +21,6 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
-import okhttp3.ResponseBody;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,7 +30,7 @@ import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
 import com.example.teste1.view.formestilo.FormEstilo;
 
-import com.example.teste1.view.models.RespostasRegistros.RespostaRegistroPerfil;
+import com.example.teste1.view.RespostasRegistros.RespostaRegistroPerfil;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -129,8 +127,8 @@ public class FormRegistro extends AppCompatActivity {
                 File file = new File(getRealPathFromURI(uriFotoSelecionada));
 
                 RequestBody fotoBody = RequestBody.create(MediaType.parse("image/*"), file);
-                
-                MultipartBody.Part fotoPart = MultipartBody.Part.createFormData("foto_perfil", file.getName(), fotoBody);
+
+                MultipartBody.Part foto_perfil = MultipartBody.Part.createFormData("foto_perfil", file.getName(), fotoBody);
 
                 RequestBody uidBody = RequestBody.create(MediaType.parse("text/plain"), uid);
                 RequestBody nomeBody = RequestBody.create(MediaType.parse("text/plain"), nome);
@@ -139,7 +137,7 @@ public class FormRegistro extends AppCompatActivity {
                 RequestBody pronomeBody = RequestBody.create(MediaType.parse("text/plain"), pronomeSelecionado);
 
                 ApiService api = ApiClient.getClient().create(ApiService.class);
-                Call<RespostaRegistroPerfil> call = api.registrarPerfil(uidBody, nomeBody, dataBody, bioBody, pronomeBody, fotoPart);
+                Call<RespostaRegistroPerfil> call = api.registrarPerfil(uidBody, nomeBody, dataBody, bioBody, pronomeBody, foto_perfil);
 
 
                 call.enqueue(new Callback<RespostaRegistroPerfil>() {
@@ -157,7 +155,7 @@ public class FormRegistro extends AppCompatActivity {
                             snackbar.show();
 
                             Intent intent = new Intent(FormRegistro.this, FormEstilo.class);
-                            intent.putExtra("id_perfil_usuario", idPerfil);
+                            intent.putExtra("id_perfil_usuario", uid);
                             startActivity(intent);
                             finish();
 
