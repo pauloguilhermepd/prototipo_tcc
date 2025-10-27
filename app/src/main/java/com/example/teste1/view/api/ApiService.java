@@ -42,10 +42,12 @@ public interface ApiService {
     @POST("registrar_estilo.php")
     Call<RespostaRegistroEstilo> registrar_estilo(
             @Field("estilo") String estilo,
-            @Field("sub_estilo") String subEstilo
+            @Field("sub_estilo") String subEstilo,
+            @Field("id_perfil_usuario") String id_perfil_usuario
 
     );
 
+    /*
     @FormUrlEncoded
     @POST("registrar_usuario_estilo.php")
     Call<RegistroPerfilEstilo> registrarUsuarioEstilo(
@@ -53,7 +55,7 @@ public interface ApiService {
             @Field("sub_estilo") String subEstilo,
             @Field("id_perfil_usuario") String idPerfilUsuario
     );
-
+    */
     @GET("verificar_usuario.php")
     Call<VerificacaoUsuario> verificarUsuario(@Query("uid") String uid);
 

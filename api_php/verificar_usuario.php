@@ -10,7 +10,7 @@ if (empty($uid)) {
 }
 
 // Verifica se o perfil existe
-$sql_perfil = $conn->prepare("SELECT id_perfil_usuario FROM perfil_usuario WHERE uid = ?");
+$sql_perfil = $conn->prepare("SELECT id_perfil_usuario FROM perfil_usuario WHERE id_perfil_usuario = ?");
 $sql_perfil->bind_param("s", $uid);
 $sql_perfil->execute();
 $result_perfil = $sql_perfil->get_result();
@@ -20,8 +20,8 @@ if ($result_perfil->num_rows > 0) {
     $id_perfil_usuario = $perfil['id_perfil_usuario'];
 
     // Verifica se o estilo foi registrado
-    $sql_estilo = $conn->prepare("SELECT id_usuario_estilo FROM usuario_estilo WHERE id_perfil_usuario = ?");
-    $sql_estilo->bind_param("i", $id_perfil_usuario);
+    $sql_estilo = $conn->prepare("SELECT id_usu_estilo FROM usu_estilo WHERE id_perfil_usuario = ?");
+    $sql_estilo->bind_param("s", $id_perfil_usuario);
     $sql_estilo->execute();
     $result_estilo = $sql_estilo->get_result();
 

@@ -75,41 +75,26 @@ public class FormEstilo extends AppCompatActivity {
                 snackbar.show();
             }
             else{
+
+                String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 ApiService api = ApiClient.getClient().create(ApiService.class);
-                Call<RespostaRegistroEstilo> call = api.registrar_estilo(estiloSelecionado, subestilo);
+                Call<RespostaRegistroEstilo> call = api.registrar_estilo(estiloSelecionado, subestilo, uid);
 
                 call.enqueue(new Callback<RespostaRegistroEstilo>() {
                     @Override
                     public void onResponse(Call<RespostaRegistroEstilo> call, Response<RespostaRegistroEstilo> response) {
                         if(response.isSuccessful()){
                             RespostaRegistroEstilo resposta = response.body();
-
                             String status = resposta.getStatus();
 
-                            String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                            Log.d("Api", "Status: " + status);
+                            Snackbar snackbar = Snackbar.make(view, "Estilo registrado com sucesso!", Snackbar.LENGTH_SHORT);
+                            snackbar.setBackgroundTint(Color.GREEN);
+                            snackbar.show();
 
-                            Call<RegistroPerfilEstilo> call1 = api.registrarUsuarioEstilo(estiloSelecionado, subestilo, idPerfilUsuario);
-                            call1.enqueue(new Callback<RegistroPerfilEstilo>() {
-                                @Override
-                                public void onResponse(Call<RegistroPerfilEstilo> call, Response<RegistroPerfilEstilo> response) {
-                                    if(response.isSuccessful()){
-                                        Log.d("Api", "Status: " + status);
-                                        Snackbar snackbar = Snackbar.make(view, "Estilo registrado com sucesso!", Snackbar.LENGTH_SHORT);
-                                        snackbar.setBackgroundTint(Color.GREEN);
-                                        snackbar.show();
-
-                                        Intent intent = new Intent(FormEstilo.this, TelaPerfil.class);
-                                        startActivity(intent);
-                                        finish();
-                                    }
-                                }
-
-                                @Override
-                                public void onFailure(Call<RegistroPerfilEstilo> call, Throwable t) {
-                                    Log.e("API", "Erro: registro de perfil e estilo");
-                                }
-                            });
-
+                            Intent intent = new Intent(FormEstilo.this, TelaPerfil.class);
+                            startActivity(intent);
+                            finish();
 
                         }
                         else {

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/10/2025 às 21:59
+-- Tempo de geração: 25/10/2025 às 17:22
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -59,6 +59,13 @@ CREATE TABLE `estilos` (
   `sub_estilo` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Despejando dados para a tabela `estilos`
+--
+
+INSERT INTO `estilos` (`id_estilo`, `estilo`, `sub_estilo`) VALUES
+(5, 'Cott', 'Meio teste da silva');
+
 -- --------------------------------------------------------
 
 --
@@ -91,6 +98,8 @@ CREATE TABLE `perfil_usuario` (
 -- Despejando dados para a tabela `perfil_usuario`
 --
 
+INSERT INTO `perfil_usuario` (`id_perfil_usuario`, `nome_completo`, `data_nascimento`, `biografia`, `pronomes`, `foto_perfil`) VALUES
+('lcS4hRwtA3hBICcwAZtqv7JFaPQ2', 'jajaja', '2006-05-05', 'kakakaka', 'O', 0x75706c6f6164732f363866393565363330646635315f313030303135353130362e6a7067);
 
 -- --------------------------------------------------------
 
@@ -191,16 +200,7 @@ ALTER TABLE `curtidas`
 -- AUTO_INCREMENT de tabela `estilos`
 --
 ALTER TABLE `estilos`
-  MODIFY `id_estilo` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de tabela `login`
---
-
---
--- AUTO_INCREMENT de tabela `perfil_usuario`
---
-
+  MODIFY `id_estilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `publicacoes`
@@ -212,7 +212,7 @@ ALTER TABLE `publicacoes`
 -- AUTO_INCREMENT de tabela `usu_estilo`
 --
 ALTER TABLE `usu_estilo`
-  MODIFY `id_usu_estilo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usu_estilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restrições para tabelas despejadas

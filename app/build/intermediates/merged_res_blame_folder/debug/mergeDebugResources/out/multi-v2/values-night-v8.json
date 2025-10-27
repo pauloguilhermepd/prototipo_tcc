@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.teste1.app-mergeDebugResources-48:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.teste1.app-mergeDebugResources-49:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Paulo\\.gradle\\caches\\8.13\\transforms\\e23457d27acdf7a54f222526fe6fbac6\\transformed\\material-1.10.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Paulo\\.gradle\\caches\\8.13\\transforms\\3154804732ac59f7980b19888b021c09\\transformed\\material-1.10.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Paulo\\.gradle\\caches\\8.13\\transforms\\a44f7c51e403f63b224234124fe3605c\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Paulo\\.gradle\\caches\\8.13\\transforms\\6f57ac1a07f6f37042b2cb53cefa30f8\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -79,14 +79,12 @@ public class FormLogin extends AppCompatActivity {
                                         finish();
 
                                     }else if (status.equals("sem_estilo")) {
-                                        // Usuário tem perfil mas não escolheu estilo
                                         Intent intent = new Intent(FormLogin.this, FormEstilo.class);
                                         intent.putExtra("id_perfil_usuario", verificacao.getId_perfil_usuario());
                                         startActivity(intent);
                                         finish();
 
                                     } else {
-                                        // Usuário sem perfil
                                         Intent intent = new Intent(FormLogin.this, FormRegistro.class);
                                         startActivity(intent);
                                         finish();
@@ -103,9 +101,6 @@ public class FormLogin extends AppCompatActivity {
                             }
                         });
 
-                        Intent intent = new Intent(FormLogin.this, FormRegistro.class);
-                        startActivity(intent);
-                        finish();
                     }
                 }).addOnFailureListener(e -> {
                     String msgErro = "Erro ao fazer login";
