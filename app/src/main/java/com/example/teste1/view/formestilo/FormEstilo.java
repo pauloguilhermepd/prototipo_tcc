@@ -38,8 +38,6 @@ public class FormEstilo extends AppCompatActivity {
         EditText edt_subestilo = findViewById(R.id.edit_subestilo);
         Button btn_continuar = findViewById(R.id.btn_continuar);
 
-        Intent intent = getIntent();
-        String idPerfilUsuario = intent.getStringExtra("id_perfil_usuario");
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,

@@ -1,4 +1,6 @@
 package com.example.teste1.view.api;
+import com.example.teste1.view.RespostasRegistros.RespostaBuscarUsuario;
+import com.example.teste1.view.RespostasRegistros.RespostaRegistroPublicacao;
 import com.example.teste1.view.models.Comentario;
 import com.example.teste1.view.models.Publicacao;
 
@@ -42,27 +44,26 @@ public interface ApiService {
     @POST("registrar_estilo.php")
     Call<RespostaRegistroEstilo> registrar_estilo(
             @Field("estilo") String estilo,
-            @Field("sub_estilo") String subEstilo,
+            @Field("sub_estilo") String sub_estilo,
             @Field("id_perfil_usuario") String id_perfil_usuario
 
     );
 
-    /*
-    @FormUrlEncoded
-    @POST("registrar_usuario_estilo.php")
-    Call<RegistroPerfilEstilo> registrarUsuarioEstilo(
-            @Field("estilo") String estilo,
-            @Field("sub_estilo") String subEstilo,
-            @Field("id_perfil_usuario") String idPerfilUsuario
-    );
-    */
+
     @GET("verificar_usuario.php")
     Call<VerificacaoUsuario> verificarUsuario(@Query("uid") String uid);
 
     @GET("buscar_usuario.php")
-    Call<Usuario> buscarUsuario(@Query("uid") String uid);
+    Call<RespostaBuscarUsuario> buscarUsuario(@Query("uid") String uid);
 
-
+    @Multipart
+    @POST("registrar_publicacao.php")
+    Call<RespostaRegistroPublicacao> registrarPublicacao(
+            @Part("uid") RequestBody uidBody,
+            @Part("descricao") RequestBody descBody,
+            @Part("titulo") RequestBody tituloBody,
+            @Part MultipartBody.Part imagem_publi
+    );
 
     @GET("listar_comentarios.php")
     Call<List<Comentario>> listarComentarios(

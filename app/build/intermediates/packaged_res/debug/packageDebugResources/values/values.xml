@@ -26,20 +26,25 @@
     <string name="titulo_form_cadastro">Cadastre-se</string>
     <string name="titulo_form_estilo">Estilo</string>
     <string name="titulo_form_login">Entre</string>
+    <string name="titulo_form_publi">Crie sua publicação</string>
     <string name="titulo_form_registro">Bem vindo ao  FitMatch!</string>
     <string name="txt_biografia">Biografia:</string>
     <string name="txt_btn_cadastrar">Cadastrar</string>
+    <string name="txt_btn_criar_publi">Criar Publicação</string>
     <string name="txt_btn_entrar">Entrar</string>
     <string name="txt_continuar">Continuar</string>
     <string name="txt_data_nascimento">Data de Nascimento:</string>
+    <string name="txt_descricao_publi">Descrição</string>
     <string name="txt_foto_perfil">Foto de perfil</string>
     <string name="txt_info_subestilo">SubEstilo é um estilo próprio seu. Descreva ele da sua maneira!</string>
+    <string name="txt_insira_img">Insira uma imagem</string>
     <string name="txt_link_cadastrar">Não possui uma conta? Cadastre-se</string>
     <string name="txt_link_login">Já possui uma conta? Entre</string>
     <string name="txt_nome_completo_registro">Nome Completo:</string>
     <string name="txt_pronomes">Pronomes:</string>
     <string name="txt_prosseguir">Prosseguir</string>
     <string name="txt_subestilo">SubEstilo</string>
+    <string name="txt_titulo_publi">Titulo</string>
     <style name="Base.Theme.Teste1" parent="Theme.Material3.DayNight.NoActionBar">
         
         

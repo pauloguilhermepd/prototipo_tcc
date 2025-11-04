@@ -4,7 +4,7 @@
             "outputFile": "com.example.teste1.app-mergeDebugResources-49:/values-h550dp-port-v13/values-h550dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Paulo\\.gradle\\caches\\8.13\\transforms\\3154804732ac59f7980b19888b021c09\\transformed\\material-1.10.0\\res\\values-h550dp-port-v13\\values-h550dp-port-v13.xml",
+                    "source": "/home/paulo/.gradle/caches/8.13/transforms/3154804732ac59f7980b19888b021c09/transformed/material-1.10.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

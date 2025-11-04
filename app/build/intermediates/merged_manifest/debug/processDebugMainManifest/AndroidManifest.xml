@@ -48,6 +48,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.Teste1" >
         <activity
+            android:name="com.example.teste1.item_publicacao"
+            android:exported="false" />
+        <activity
+            android:name="com.example.teste1.view.formpublicacao.FormPublicacao"
+            android:exported="false" />
+        <activity
             android:name="com.example.teste1.view.telas_usuario.TelaPerfil"
             android:exported="false" />
         <activity

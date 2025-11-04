@@ -33,4 +33,12 @@
     </string-array>
 
 
+    //FormPublicacao
+    <string name="titulo_form_publi">Crie sua publicação</string>
+    <string name="txt_insira_img">Insira uma imagem</string>
+    <string name="txt_titulo_publi">Titulo</string>
+    <string name="txt_descricao_publi">Descrição</string>
+    <string name="txt_btn_criar_publi">Criar Publicação</string>
+
+
 </resources>

@@ -4,7 +4,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
 
-    private static final String BASE_URL = "https://abby-unbeaued-tyron.ngrok-free.dev/testeapi_php/";
+    private static final String BASE_URL = "https://abby-unbeaued-tyron.ngrok-free.dev/api_php/";
     private static Retrofit retrofit = null;
 
 
@@ -13,7 +13,7 @@ public class ApiClient {
     public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl("https://abby-unbeaued-tyron.ngrok-free.dev/testeapi_php/")
+                    .baseUrl("https://abby-unbeaued-tyron.ngrok-free.dev/api_php/")
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }

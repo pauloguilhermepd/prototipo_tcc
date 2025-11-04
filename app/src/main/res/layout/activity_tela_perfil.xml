@@ -38,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Pronome"
+        android:text="Pronomes"
         android:textSize="16sp"
         android:textColor="@color/black"
         android:layout_marginBottom="16dp" />
@@ -54,6 +54,55 @@
         android:gravity="center"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="24dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tp_estilo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estilo"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginEnd="30sp"
+        />
+
+        <TextView
+            android:id="@+id/tp_subestilo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SubEstilo"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+        />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_publi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        />
+
+    <Button
+        android:id="@+id/btn_publi_telaprincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tela principal"
+
+        />
+
+
 
 
 
