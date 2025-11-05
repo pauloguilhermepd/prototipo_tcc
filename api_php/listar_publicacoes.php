@@ -8,10 +8,11 @@ $sql = "SELECT
     p.descricao,
     p.foto,
     u.nome_completo AS autor_nome,
-    u.foto_perfil AS autor_foto
+    u.foto_perfil AS autor_foto,
+    (SELECT COUNT(*) FROM curtidas c WHERE c.id_publicacao = p.id_publicacoes) AS curtidas
 FROM publicacoes p
 JOIN perfil_usuario u ON p.id_perfil_usuario = u.id_perfil_usuario
-ORDER BY p.titulo DESC";
+ORDER BY p.id_publicacoes DESC";
 
 $result = $conn->query($sql);
 
