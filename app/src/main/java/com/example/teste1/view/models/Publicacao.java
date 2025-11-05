@@ -1,16 +1,17 @@
 package com.example.teste1.view.models;
     public class Publicacao {
-        private String id_publicacoes;
+        private int id_publicacoes;
         private String titulo;
         private String descricao;
         private String foto;
         private String data_publicacao;
         private String autor_nome;
         private String autor_foto;
+        private int curtidas;
 
         // Getters e Setters
-        public String getId_publicacoes() { return id_publicacoes; }
-        public void setId_publicacoes(String id_publicacoes) { this.id_publicacoes = id_publicacoes; }
+        public int getId_publicacoes() { return id_publicacoes; }
+        public void setId_publicacoes(int id_publicacoes) { this.id_publicacoes = id_publicacoes; }
 
         public String getTitulo() { return titulo; }
         public void setTitulo(String titulo) { this.titulo = titulo; }
@@ -29,6 +30,14 @@ package com.example.teste1.view.models;
 
         public String getAutor_foto() { return autor_foto; }
         public void setAutor_foto(String autor_foto) { this.autor_foto = autor_foto; }
+
+        public int getCurtidas() {
+            return curtidas;
+        }
+
+        public void setCurtidas(int cutidas) {
+            this.curtidas = cutidas;
+        }
     }
 
 

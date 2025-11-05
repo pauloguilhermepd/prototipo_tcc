@@ -1,5 +1,6 @@
 package com.example.teste1.view.telas_usuario;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 
@@ -14,7 +15,12 @@ import com.example.teste1.R;
 import com.example.teste1.view.adapters.FeedAdapter;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
+import com.example.teste1.view.formpublicacao.FormPublicacao;
 import com.example.teste1.view.models.Publicacao;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import android.content.Intent;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.teste1.view.formpublicacao.FormPublicacao;
 
 import java.util.List;
 
@@ -33,6 +39,25 @@ public class TelaPrincipal extends AppCompatActivity {
 
         recyclerFeed = findViewById(R.id.recycler_feed);
         recyclerFeed.setLayoutManager(new LinearLayoutManager(this));
+
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_home) {
+                // Já está na tela principal
+                return true;
+            } else if (id == R.id.nav_publicar) {
+                Intent intent = new Intent(TelaPrincipal.this, FormPublicacao.class);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.nav_perfil) {
+                Intent intent = new Intent(TelaPrincipal.this, TelaPerfil.class);
+                startActivity(intent);
+                return true;
+            }
+            return false;
+        });
 
         carregarPublicacoes();
 

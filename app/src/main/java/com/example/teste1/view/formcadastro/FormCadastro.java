@@ -35,6 +35,8 @@ public class FormCadastro extends AppCompatActivity {
             finish();
         });
 
+
+
         binding.btnCadastrar.setOnClickListener(view -> {
             String email = binding.editEmailCadastro.getText().toString();
             String senha = binding.editSenhaCadastro.getText().toString();

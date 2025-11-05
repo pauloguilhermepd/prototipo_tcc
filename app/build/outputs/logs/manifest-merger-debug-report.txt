@@ -1,13 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-48:12
-INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-48:12
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-54:12
+INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-54:12
 MERGED from [androidx.databinding:viewbinding:8.12.3] /home/paulo/.gradle/caches/8.13/transforms/f3f8e48afc4cbe52d3f105b5858bab03/transformed/viewbinding-8.12.3/AndroidManifest.xml:2:1-7:12
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] /home/paulo/.gradle/caches/8.13/transforms/bb4e5ae73fc7a0c27a8e3087b5239c9f/transformed/firebase-ui-auth-9.0.0/AndroidManifest.xml:2:1-117:12
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] /home/paulo/.gradle/caches/8.13/transforms/55a7701add7304e146490e0f23073fa5/transformed/firebase-analytics-23.0.0/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.material:material:1.10.0] /home/paulo/.gradle/caches/8.13/transforms/3154804732ac59f7980b19888b021c09/transformed/material-1.10.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.12.0] /home/paulo/.gradle/caches/8.13/transforms/fdcf29d239f2eb0d63cb49b192bf1188/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/paulo/.gradle/caches/8.13/transforms/c89bf480c3c9d873f3d3c8d18ac8d44f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/paulo/.gradle/caches/8.13/transforms/3d7bfc96cc2070ebec70dbc6ac3014e5/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] /home/paulo/.gradle/caches/8.13/transforms/6f57ac1a07f6f37042b2cb53cefa30f8/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -39,8 +39,8 @@ MERGED from [androidx.emoji2:emoji2:1.2.0] /home/paulo/.gradle/caches/8.13/trans
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/paulo/.gradle/caches/8.13/transforms/e1145b6dd9ecd47937892b5c7b5caea7/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/paulo/.gradle/caches/8.13/transforms/67d7f687bbeebc988a629f1ff320d873/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/paulo/.gradle/caches/8.13/transforms/d8152a90505c3670a6ac91bf3bbfbc12/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] /home/paulo/.gradle/caches/8.13/transforms/7599b0ada629aab91b209d454bbfcd2b/transformed/transition-1.5.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/paulo/.gradle/caches/8.13/transforms/82ffb7315b23bdc39203ea43fa1a525c/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.2.0] /home/paulo/.gradle/caches/8.13/transforms/76095e25aacd3ebecf041ec44c253555/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/paulo/.gradle/caches/8.13/transforms/33fee39ee57044e414620005d23e154f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/paulo/.gradle/caches/8.13/transforms/62836d68f0b22a2bca5dbf0b29174160/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.privacysandbox.ads:ads-adservices-java:1.1.0-beta11] /home/paulo/.gradle/caches/8.13/transforms/6b6ad7050551d7f957f8d273ef5b4b51/transformed/ads-adservices-java-1.1.0-beta11/AndroidManifest.xml:2:1-7:12
@@ -127,14 +127,14 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:23.0.0] /h
 	android:name
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:7:5-46:19
-INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:7:5-46:19
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:7:5-52:19
+INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:7:5-52:19
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] /home/paulo/.gradle/caches/8.13/transforms/bb4e5ae73fc7a0c27a8e3087b5239c9f/transformed/firebase-ui-auth-9.0.0/AndroidManifest.xml:23:5-115:19
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] /home/paulo/.gradle/caches/8.13/transforms/bb4e5ae73fc7a0c27a8e3087b5239c9f/transformed/firebase-ui-auth-9.0.0/AndroidManifest.xml:23:5-115:19
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] /home/paulo/.gradle/caches/8.13/transforms/55a7701add7304e146490e0f23073fa5/transformed/firebase-analytics-23.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] /home/paulo/.gradle/caches/8.13/transforms/55a7701add7304e146490e0f23073fa5/transformed/firebase-analytics-23.0.0/AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.material:material:1.10.0] /home/paulo/.gradle/caches/8.13/transforms/3154804732ac59f7980b19888b021c09/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.10.0] /home/paulo/.gradle/caches/8.13/transforms/3154804732ac59f7980b19888b021c09/transformed/material-1.10.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] /home/paulo/.gradle/caches/8.13/transforms/fdcf29d239f2eb0d63cb49b192bf1188/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.12.0] /home/paulo/.gradle/caches/8.13/transforms/fdcf29d239f2eb0d63cb49b192bf1188/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/paulo/.gradle/caches/8.13/transforms/c89bf480c3c9d873f3d3c8d18ac8d44f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/paulo/.gradle/caches/8.13/transforms/c89bf480c3c9d873f3d3c8d18ac8d44f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/paulo/.gradle/caches/8.13/transforms/180b9021fe4247f89d1cb6c1f65a468d/transformed/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
@@ -217,64 +217,76 @@ MERGED from [com.google.android.play:core-common:2.0.3] /home/paulo/.gradle/cach
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:15:9-44
 	android:dataExtractionRules
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:9:9-65
-activity#com.example.teste1.item_publicacao
+activity#com.example.teste1.menu_bottom_nav
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:16:9-18:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:18:13-37
 	android:name
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:17:13-44
-activity#com.example.teste1.view.formpublicacao.FormPublicacao
+activity#com.example.teste1.TelaComentarios
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:19:9-21:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:20:13-63
-activity#com.example.teste1.view.telas_usuario.TelaPerfil
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:20:13-44
+activity#com.example.teste1.item_publicacao
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:22:9-24:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:23:13-58
-activity#com.example.teste1.view.telas_usuario.TelaPrincipal
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:23:13-44
+activity#com.example.teste1.view.formpublicacao.FormPublicacao
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:25:9-27:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:26:13-61
-activity#com.example.teste1.view.formestilo.FormEstilo
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:26:13-63
+activity#com.example.teste1.view.telas_usuario.TelaPerfil
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:28:9-30:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:29:13-55
-activity#com.example.teste1.view.formregistro.FormRegistro
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:29:13-58
+activity#com.example.teste1.view.telas_usuario.TelaPrincipal
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:31:9-33:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:33:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:32:13-59
-activity#com.example.teste1.view.formlogin.FormLogin
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:32:13-61
+activity#com.example.teste1.view.formestilo.FormEstilo
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:34:9-36:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:35:13-53
-activity#com.example.teste1.view.formcadastro.FormCadastro
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:37:9-45:20
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:35:13-55
+activity#com.example.teste1.view.formregistro.FormRegistro
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:37:9-39:40
 	android:exported
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:39:13-36
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:39:13-37
 	android:name
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:38:13-59
+activity#com.example.teste1.view.formlogin.FormLogin
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:40:9-42:40
+	android:exported
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:42:13-37
+	android:name
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:41:13-53
+activity#com.example.teste1.view.formcadastro.FormCadastro
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:43:9-51:20
+	android:exported
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:45:13-36
+	android:name
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:44:13-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:40:13-44:29
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:46:13-50:29
 action#android.intent.action.MAIN
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:41:17-69
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:47:17-69
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:41:25-66
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:47:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:43:17-77
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:49:17-77
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:43:27-74
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:49:27-74
 uses-sdk
 INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml
@@ -285,8 +297,8 @@ MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] /home/paulo/.gradle/caches/8
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] /home/paulo/.gradle/caches/8.13/transforms/bb4e5ae73fc7a0c27a8e3087b5239c9f/transformed/firebase-ui-auth-9.0.0/AndroidManifest.xml:6:5-44
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] /home/paulo/.gradle/caches/8.13/transforms/55a7701add7304e146490e0f23073fa5/transformed/firebase-analytics-23.0.0/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] /home/paulo/.gradle/caches/8.13/transforms/55a7701add7304e146490e0f23073fa5/transformed/firebase-analytics-23.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.material:material:1.10.0] /home/paulo/.gradle/caches/8.13/transforms/3154804732ac59f7980b19888b021c09/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.10.0] /home/paulo/.gradle/caches/8.13/transforms/3154804732ac59f7980b19888b021c09/transformed/material-1.10.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] /home/paulo/.gradle/caches/8.13/transforms/fdcf29d239f2eb0d63cb49b192bf1188/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.12.0] /home/paulo/.gradle/caches/8.13/transforms/fdcf29d239f2eb0d63cb49b192bf1188/transformed/material-1.12.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/paulo/.gradle/caches/8.13/transforms/c89bf480c3c9d873f3d3c8d18ac8d44f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/paulo/.gradle/caches/8.13/transforms/c89bf480c3c9d873f3d3c8d18ac8d44f/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/paulo/.gradle/caches/8.13/transforms/3d7bfc96cc2070ebec70dbc6ac3014e5/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
@@ -349,10 +361,10 @@ MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/paulo/.gradle/cache
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/paulo/.gradle/caches/8.13/transforms/67d7f687bbeebc988a629f1ff320d873/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/paulo/.gradle/caches/8.13/transforms/d8152a90505c3670a6ac91bf3bbfbc12/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/paulo/.gradle/caches/8.13/transforms/d8152a90505c3670a6ac91bf3bbfbc12/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] /home/paulo/.gradle/caches/8.13/transforms/7599b0ada629aab91b209d454bbfcd2b/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] /home/paulo/.gradle/caches/8.13/transforms/7599b0ada629aab91b209d454bbfcd2b/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/paulo/.gradle/caches/8.13/transforms/82ffb7315b23bdc39203ea43fa1a525c/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/paulo/.gradle/caches/8.13/transforms/82ffb7315b23bdc39203ea43fa1a525c/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.2.0] /home/paulo/.gradle/caches/8.13/transforms/76095e25aacd3ebecf041ec44c253555/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] /home/paulo/.gradle/caches/8.13/transforms/76095e25aacd3ebecf041ec44c253555/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/paulo/.gradle/caches/8.13/transforms/33fee39ee57044e414620005d23e154f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/paulo/.gradle/caches/8.13/transforms/33fee39ee57044e414620005d23e154f/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/paulo/.gradle/caches/8.13/transforms/62836d68f0b22a2bca5dbf0b29174160/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41

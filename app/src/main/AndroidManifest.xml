@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teste1">
         <activity
+            android:name=".menu_bottom_nav"
+            android:exported="false" />
+        <activity
+            android:name=".TelaComentarios"
+            android:exported="false" />
+        <activity
             android:name=".item_publicacao"
             android:exported="false" />
         <activity

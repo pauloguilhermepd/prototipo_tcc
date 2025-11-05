@@ -1,5 +1,6 @@
 package com.example.teste1.view.api;
 import com.example.teste1.view.RespostasRegistros.RespostaBuscarUsuario;
+import com.example.teste1.view.RespostasRegistros.RespostaRegistroCurtida;
 import com.example.teste1.view.RespostasRegistros.RespostaRegistroPublicacao;
 import com.example.teste1.view.models.Comentario;
 import com.example.teste1.view.models.Publicacao;
@@ -32,13 +33,6 @@ public interface ApiService {
     @GET("listar_publicacoes.php")
     Call<List<Publicacao>> listarPublicacoes();
 
-    @FormUrlEncoded
-    @POST("registrar_comentario.php")
-    Call<Void> registrarComentario(
-            @Field("id_publicacoes") int idPublicacoes,
-            @Field("id_usuario") String idUsuario,
-            @Field("comentarios") String comentarios
-    );
 
     @FormUrlEncoded
     @POST("registrar_estilo.php")
@@ -47,6 +41,26 @@ public interface ApiService {
             @Field("sub_estilo") String sub_estilo,
             @Field("id_perfil_usuario") String id_perfil_usuario
 
+    );
+
+    @FormUrlEncoded
+    @POST("registrar_curtida.php")
+    Call<RespostaRegistroCurtida> registrarCurtida(
+            @Field("id_publicacoes") int idPublicacoes,
+            @Field("id_perfil_usuario") String idPerfilUsuario
+    );
+
+    @FormUrlEncoded
+    @POST("registrar_comentario.php")
+    Call<Void> registrarComentario(
+            @Field("id_publicacoes") int idPublicacoes,
+            @Field("id_usuario") String idUsuario,
+            @Field("comentarios") String comentarios
+    );
+
+    @GET("listar_comentarios.php")
+    Call<List<Comentario>> listarComentarios(
+            @Query("id_publicacoes") int idPublicacoes
     );
 
 
@@ -65,8 +79,5 @@ public interface ApiService {
             @Part MultipartBody.Part imagem_publi
     );
 
-    @GET("listar_comentarios.php")
-    Call<List<Comentario>> listarComentarios(
-            @Query("id_publicacoes") int idPublicacoes
-    );
+
 }
