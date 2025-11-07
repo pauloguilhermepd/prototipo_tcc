@@ -46,7 +46,7 @@ public interface ApiService {
     @FormUrlEncoded
     @POST("registrar_curtida.php")
     Call<RespostaRegistroCurtida> registrarCurtida(
-            @Field("id_publicacoes") int idPublicacoes,
+            @Field("id_publicacao") int idPublicacoe,
             @Field("id_perfil_usuario") String idPerfilUsuario
     );
 
@@ -64,6 +64,7 @@ public interface ApiService {
     );
 
 
+
     @GET("verificar_usuario.php")
     Call<VerificacaoUsuario> verificarUsuario(@Query("uid") String uid);
 
@@ -79,5 +80,18 @@ public interface ApiService {
             @Part MultipartBody.Part imagem_publi
     );
 
+    @Multipart
+    @POST("editar_perfil.php")
+    Call<RespostaRegistroPerfil> editarPerfil(
+                                               @Part("uid") RequestBody uidBody,
+                                               @Part("nome") RequestBody nomeBody,
+                                               @Part("data_aniver") RequestBody dataNascimento,
+                                               @Part("bio") RequestBody bioBody,
+                                               @Part("pronome") RequestBody pronomeBody,
+                                               @Part MultipartBody.Part foto_perfil
+    );
+
+    @GET("listar_publicacoes_usuario.php")
+    Call<List<Publicacao>> listarPublicacoesDoUsuario(@Query("uid") String uid);
 
 }

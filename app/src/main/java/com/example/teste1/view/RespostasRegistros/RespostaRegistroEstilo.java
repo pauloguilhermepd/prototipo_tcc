@@ -2,30 +2,30 @@ package com.example.teste1.view.RespostasRegistros;
 
 public class RespostaRegistroEstilo {
     private String status;
-    private String estilo;
-    private String sub_estilo;
+    private String mensagem;
+    private int id_estilo;
 
     public String getStatus() {
         return status;
-    }
-
-    public String getEstilo() {
-        return estilo;
-    }
-
-    public void setEstilo(String estilo) {
-        this.estilo = estilo;
     }
 
     public void setStatus(String status) {
         this.status = status;
     }
 
-    public String getSub_estilo() {
-        return sub_estilo;
+    public String getMensagem() {
+        return mensagem;
     }
 
-    public void setSub_estilo(String sub_estilo) {
-        this.sub_estilo = sub_estilo;
+    public void setMensagem(String mensagem) {
+        this.mensagem = mensagem;
+    }
+
+    public int getId_estilo() {
+        return id_estilo;
+    }
+
+    public void setId_estilo(int id_estilo) {
+        this.id_estilo = id_estilo;
     }
 }

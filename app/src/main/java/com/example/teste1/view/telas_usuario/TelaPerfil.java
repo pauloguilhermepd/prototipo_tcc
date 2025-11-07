@@ -3,42 +3,47 @@ package com.example.teste1.view.telas_usuario;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Bundle;
 import android.util.Base64;
-import android.util.Log;
 
 import com.bumptech.glide.Glide;
 import com.example.teste1.R;
+import com.example.teste1.TelaConfiguracoes;
 import com.example.teste1.view.RespostasRegistros.RespostaBuscarUsuario;
+import com.example.teste1.view.adapters.FeedAdapter;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
 import com.example.teste1.view.formpublicacao.FormPublicacao;
+import com.example.teste1.view.models.Publicacao;
 import com.example.teste1.view.models.Usuario;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import com.example.teste1.R;
+import java.util.List;
 
 public class TelaPerfil extends AppCompatActivity {
     private ImageView imgPerfil;
     private TextView txtNome, txtPronome, txtBio, txtEstilo, txtSubestilo;
-    private Button btn_publi, btn_publi_telaprincipal;
     private ApiService apiService;
     private FirebaseAuth auth;
+    private RecyclerView recyclerPerfil;
+    private String uid;
+    private FeedAdapter feedAdapter;
+    private CircleImageView imgConfig;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,23 +56,38 @@ public class TelaPerfil extends AppCompatActivity {
         txtBio = findViewById(R.id.tp_bio);
         txtEstilo = findViewById(R.id.tp_estilo);
         txtSubestilo = findViewById(R.id.tp_subestilo);
-        btn_publi = findViewById(R.id.btn_publi);
+        imgConfig = findViewById(R.id.cim_configuracoes);
         auth = FirebaseAuth.getInstance();
-        String uid = auth.getCurrentUser().getUid();
-        btn_publi_telaprincipal = findViewById(R.id.btn_publi_telaprincipal);
+        uid = auth.getCurrentUser().getUid();
+
+        recyclerPerfil = findViewById(R.id.recycler_publicacoes_perfil);
+        recyclerPerfil.setLayoutManager(new LinearLayoutManager(this));
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_home) {
+                Intent intent = new Intent(TelaPerfil.this, TelaPrincipal.class);
+                startActivity(intent);
+                return true;
+            } else if (id == R.id.nav_publicar) {
+                Intent intent = new Intent(TelaPerfil.this, FormPublicacao.class);
+                startActivity(intent);
+                return true;
+            } else return id == R.id.nav_perfil;
+        });
+
         carregarPerfil(uid);
 
-        btn_publi.setOnClickListener(view -> {
-            Intent intent = new Intent(TelaPerfil.this, FormPublicacao.class);
+        carregarPublicacoesDoUsuario(uid);
+
+        imgConfig.setOnClickListener(view -> {
+            Intent intent = new Intent(TelaPerfil.this, TelaConfiguracoes.class);
             startActivity(intent);
             finish();
         });
 
-        btn_publi_telaprincipal.setOnClickListener(view -> {
-            Intent intent = new Intent(TelaPerfil.this, TelaPrincipal.class);
-            startActivity(intent);
-            finish();
-        } );
+
     }
 
     private void carregarPerfil(String uid) {
@@ -117,6 +137,28 @@ public class TelaPerfil extends AppCompatActivity {
             }
         });
 
+    }
+
+    private void carregarPublicacoesDoUsuario(String uid) {
+        ApiService api = ApiClient.getClient().create(ApiService.class);
+
+        Call<List<Publicacao>> call = api.listarPublicacoesDoUsuario(uid);
+
+        call.enqueue(new Callback<List<Publicacao>>() {
+            @Override
+            public void onResponse(Call<List<Publicacao>> call, Response<List<Publicacao>> response) {
+                if (response.isSuccessful() && response.body() != null) {
+                    feedAdapter = new FeedAdapter(response.body(), TelaPerfil.this);
+                    recyclerPerfil.setAdapter(feedAdapter);
+                } else {
+                    Log.e("Perfil", "Erro ao carregar publicações do usuário: " + response.message());
+                }
+            }
+            @Override
+            public void onFailure(Call<List<Publicacao>> call, Throwable t) {
+                Log.e("Perfil", "Falha ao carregar publicações do usuário: " + t.getMessage());
+            }
+        });
     }
 
 

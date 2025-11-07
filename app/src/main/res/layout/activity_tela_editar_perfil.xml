@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaEditarPerfil"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:text="@string/txt_foto_perfil"
+        android:textStyle="bold"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/cim_foto_edit_perfil"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/icons8_usuario_96"
+        android:layout_gravity="center"
+        android:layout_marginTop="10sp"
+        android:scaleType="centerCrop"
+        app:civ_border_width="2dp"
+        app:civ_border_color="@color/black"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="30sp"
+        android:textSize="20sp"
+        android:text="@string/txt_nome_completo_registro"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/edit_nome_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:hint="Nome Completo"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:autofillHints="name"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="25sp"
+        android:textSize="20sp"
+        android:text="@string/txt_data_nascimento"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/edit_data_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:autofillHints="name"
+        android:inputType="date"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="25sp"
+        android:textSize="20sp"
+        android:text="@string/txt_biografia"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/edit_bio_editar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:hint="teste1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:autofillHints="name"
+        android:inputType="text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="25sp"
+        android:textSize="20sp"
+        android:text="@string/txt_pronomes"
+        android:textStyle="bold"
+        />
+
+    <Spinner
+        android:id="@+id/spin_pronomes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:padding="10dp"
+        android:spinnerMode="dropdown"
+        android:maxLines="1"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btn_editar_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:text="Editar"
+        android:textSize="20sp"
+        />
+</LinearLayout>

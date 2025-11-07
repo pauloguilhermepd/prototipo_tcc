@@ -14,6 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teste1">
         <activity
+            android:name=".TelaConfiguracoes"
+            android:exported="false" />
+        <activity
+            android:name=".TelaEditarPerfil"
+            android:exported="false" />
+        <activity
+            android:name=".item_comentario"
+            android:exported="false" />
+        <activity
             android:name=".menu_bottom_nav"
             android:exported="false" />
         <activity

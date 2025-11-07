@@ -99,7 +99,7 @@ public class FormRegistro extends AppCompatActivity {
                     pronomeSelecionado = "A";
                 }if(pronomeSelecionado.endsWith("u")){
                     pronomeSelecionado = "U";
-                }else{
+                }if(pronomeSelecionado.endsWith("o")){
                     pronomeSelecionado = "O";
                 }
 
