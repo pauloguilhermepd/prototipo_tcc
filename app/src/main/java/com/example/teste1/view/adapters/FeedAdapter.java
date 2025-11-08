@@ -1,5 +1,6 @@
 package com.example.teste1.view.adapters;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.teste1.R;
 import com.example.teste1.TelaComentarios;
+import com.example.teste1.TelaEditarPublicacao;
 import com.example.teste1.view.RespostasRegistros.RespostaRegistroCurtida;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
@@ -74,7 +77,6 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
                                 String idPerfilUsuario = resposta.getIdPerfilUsuario();
                                 int idPublicacoes = resposta.getIdPublicacaoes();
                             }
-                            //Terminar de resolver bug da curtida
                             boolean curtiu = holder.isCurtido;
                             holder.isCurtido = !curtiu;
                             holder.btnCurtir.setImageResource(
@@ -96,10 +98,53 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
                     });
         });
 
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        holder.itemView.setOnLongClickListener(view -> {
+            if(uid.equals(pub.getId_perfil_usuario())){
+                new AlertDialog.Builder(context).setTitle("Opções da publicação").setItems(new String[]{"Editar", "Excluir"}, ((dialog, which) -> {
+                    if(which == 0) {
+                        Intent intent = new Intent(context, TelaEditarPublicacao.class);
+                        intent.putExtra("ID_PUBLICACAO", pub.getId_publicacoes());
+                        intent.putExtra("TITULO_ATUAL", pub.getTitulo());
+                        intent.putExtra("DESCRICAO_ATUAL", pub.getDescricao());
+                        context.startActivity(intent);
+                    } else if (which == 1) {
+                        excluirPublicacao(pub.getId_publicacoes(), uid, holder.getAdapterPosition());
+                    }
+                })).show();
+            }
+            return true;
+        });
+
         holder.btnComentar.setOnClickListener(v -> {
                     Intent intent = new Intent(context, TelaComentarios.class);
                     intent.putExtra("id_publicacoes", pub.getId_publicacoes());
                     context.startActivity(intent);
+        });
+    }
+
+    private void excluirPublicacao(int idPublicacao, String uid, int adapterPosition) {
+        ApiService api = ApiClient.getClient().create(ApiService.class);
+
+        Call<Void> call = api.excluirPublicacao(idPublicacao, uid);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if(response.isSuccessful()){
+                    lista.remove(adapterPosition);
+                    notifyItemRemoved(adapterPosition);
+                    notifyItemRangeChanged(adapterPosition, lista.size());
+                    Toast.makeText(context, "Publicação excluída", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(context, "Erro ao excluir", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Toast.makeText(context, "Falha: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

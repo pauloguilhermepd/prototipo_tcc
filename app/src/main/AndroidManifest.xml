@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Teste1">
         <activity
+            android:name=".TelaEditarPublicacao"
+            android:exported="false" />
+        <activity
             android:name=".TelaConfiguracoes"
             android:exported="false" />
         <activity

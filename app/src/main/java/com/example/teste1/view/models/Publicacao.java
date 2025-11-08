@@ -8,8 +8,19 @@ package com.example.teste1.view.models;
         private String autor_nome;
         private String autor_foto;
         private int curtidas;
+        private String id_perfil_usuario;
 
         // Getters e Setters
+
+
+        public String getId_perfil_usuario() {
+            return id_perfil_usuario;
+        }
+
+        public void setId_perfil_usuario(String id_perfil_usuario) {
+            this.id_perfil_usuario = id_perfil_usuario;
+        }
+
         public int getId_publicacoes() { return id_publicacoes; }
         public void setId_publicacoes(int id_publicacoes) { this.id_publicacoes = id_publicacoes; }
 

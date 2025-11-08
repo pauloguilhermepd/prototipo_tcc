@@ -83,13 +83,28 @@ public interface ApiService {
     @Multipart
     @POST("editar_perfil.php")
     Call<RespostaRegistroPerfil> editarPerfil(
-                                               @Part("uid") RequestBody uidBody,
-                                               @Part("nome") RequestBody nomeBody,
-                                               @Part("data_aniver") RequestBody dataNascimento,
-                                               @Part("bio") RequestBody bioBody,
-                                               @Part("pronome") RequestBody pronomeBody,
-                                               @Part MultipartBody.Part foto_perfil
+            @Part("uid") RequestBody uidBody,
+            @Part("nome") RequestBody nomeBody,
+            @Part("data_aniver") RequestBody dataNascimento,
+            @Part("bio") RequestBody bioBody,
+            @Part("pronome") RequestBody pronomeBody,
+            @Part MultipartBody.Part foto_perfil
     );
+
+    @FormUrlEncoded
+    @POST("excluir_publicacao.php")
+    Call<Void> excluirPublicacao(
+            @Field("id_publicacao") int idPublicacao,
+            @Field("id_usuario") String idUsuario
+    );
+
+    @FormUrlEncoded
+    @POST("excluir_perfil.php")
+    Call<Void> excluirPerfil(
+            @Field("id_usuario") String idUsuario
+    );
+
+
 
     @GET("listar_publicacoes_usuario.php")
     Call<List<Publicacao>> listarPublicacoesDoUsuario(@Query("uid") String uid);

@@ -48,6 +48,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Teste1" >
         <activity
+            android:name="com.example.teste1.TelaEditarPublicacao"
+            android:exported="false" />
+        <activity
             android:name="com.example.teste1.TelaConfiguracoes"
             android:exported="false" />
         <activity

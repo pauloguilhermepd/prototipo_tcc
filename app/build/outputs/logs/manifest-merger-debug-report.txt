@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-63:12
-INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-63:12
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-66:12
+INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-66:12
+INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-66:12
+INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:2:1-66:12
 MERGED from [androidx.databinding:viewbinding:8.12.3] /home/paulo/.gradle/caches/8.13/transforms/f3f8e48afc4cbe52d3f105b5858bab03/transformed/viewbinding-8.12.3/AndroidManifest.xml:2:1-7:12
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] /home/paulo/.gradle/caches/8.13/transforms/bb4e5ae73fc7a0c27a8e3087b5239c9f/transformed/firebase-ui-auth-9.0.0/AndroidManifest.xml:2:1-117:12
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] /home/paulo/.gradle/caches/8.13/transforms/55a7701add7304e146490e0f23073fa5/transformed/firebase-analytics-23.0.0/AndroidManifest.xml:2:1-9:12
@@ -127,8 +127,8 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:23.0.0] /h
 	android:name
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:7:5-61:19
-INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:7:5-61:19
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:7:5-64:19
+INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:7:5-64:19
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] /home/paulo/.gradle/caches/8.13/transforms/bb4e5ae73fc7a0c27a8e3087b5239c9f/transformed/firebase-ui-auth-9.0.0/AndroidManifest.xml:23:5-115:19
 MERGED from [com.firebaseui:firebase-ui-auth:9.0.0] /home/paulo/.gradle/caches/8.13/transforms/bb4e5ae73fc7a0c27a8e3087b5239c9f/transformed/firebase-ui-auth-9.0.0/AndroidManifest.xml:23:5-115:19
 MERGED from [com.google.firebase:firebase-analytics:23.0.0] /home/paulo/.gradle/caches/8.13/transforms/55a7701add7304e146490e0f23073fa5/transformed/firebase-analytics-23.0.0/AndroidManifest.xml:7:5-20
@@ -217,94 +217,100 @@ MERGED from [com.google.android.play:core-common:2.0.3] /home/paulo/.gradle/cach
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:15:9-44
 	android:dataExtractionRules
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:9:9-65
-activity#com.example.teste1.TelaConfiguracoes
+activity#com.example.teste1.TelaEditarPublicacao
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:16:9-18:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:18:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:17:13-46
-activity#com.example.teste1.TelaEditarPerfil
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:17:13-49
+activity#com.example.teste1.TelaConfiguracoes
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:19:9-21:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:20:13-45
-activity#com.example.teste1.item_comentario
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:20:13-46
+activity#com.example.teste1.TelaEditarPerfil
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:22:9-24:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:23:13-44
-activity#com.example.teste1.menu_bottom_nav
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:23:13-45
+activity#com.example.teste1.item_comentario
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:25:9-27:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:27:13-37
 	android:name
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:26:13-44
-activity#com.example.teste1.TelaComentarios
+activity#com.example.teste1.menu_bottom_nav
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:28:9-30:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:30:13-37
 	android:name
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:29:13-44
-activity#com.example.teste1.item_publicacao
+activity#com.example.teste1.TelaComentarios
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:31:9-33:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:33:13-37
 	android:name
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:32:13-44
-activity#com.example.teste1.view.formpublicacao.FormPublicacao
+activity#com.example.teste1.item_publicacao
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:34:9-36:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:35:13-63
-activity#com.example.teste1.view.telas_usuario.TelaPerfil
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:35:13-44
+activity#com.example.teste1.view.formpublicacao.FormPublicacao
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:37:9-39:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:38:13-58
-activity#com.example.teste1.view.telas_usuario.TelaPrincipal
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:38:13-63
+activity#com.example.teste1.view.telas_usuario.TelaPerfil
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:40:9-42:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:41:13-61
-activity#com.example.teste1.view.formestilo.FormEstilo
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:41:13-58
+activity#com.example.teste1.view.telas_usuario.TelaPrincipal
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:43:9-45:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:44:13-55
-activity#com.example.teste1.view.formregistro.FormRegistro
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:44:13-61
+activity#com.example.teste1.view.formestilo.FormEstilo
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:46:9-48:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:48:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:47:13-59
-activity#com.example.teste1.view.formlogin.FormLogin
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:47:13-55
+activity#com.example.teste1.view.formregistro.FormRegistro
 ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:49:9-51:40
 	android:exported
 		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:51:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:50:13-53
-activity#com.example.teste1.view.formcadastro.FormCadastro
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:52:9-60:20
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:50:13-59
+activity#com.example.teste1.view.formlogin.FormLogin
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:52:9-54:40
 	android:exported
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:54:13-36
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:54:13-37
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:53:13-59
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:53:13-53
+activity#com.example.teste1.view.formcadastro.FormCadastro
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:55:9-63:20
+	android:exported
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:57:13-36
+	android:name
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:56:13-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:55:13-59:29
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:58:13-62:29
 action#android.intent.action.MAIN
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:56:17-69
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:59:17-69
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:56:25-66
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:59:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:58:17-77
+ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:61:17-77
 	android:name
-		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:58:27-74
+		ADDED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml:61:27-74
 uses-sdk
 INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/paulo/prototipo_tcc/app/src/main/AndroidManifest.xml

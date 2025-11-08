@@ -85,6 +85,7 @@ layout activity_item_publicacao
 layout activity_tela_comentarios
 layout activity_tela_configuracoes
 layout activity_tela_editar_perfil
+layout activity_tela_editar_publicacao
 layout activity_tela_perfil
 layout activity_tela_principal
 menu menu_bottom_nav

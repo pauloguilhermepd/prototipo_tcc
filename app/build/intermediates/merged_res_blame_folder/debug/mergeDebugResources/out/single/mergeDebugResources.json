@@ -32,6 +32,10 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
+        "merged": "com.example.teste1.app-debug-51:/layout_activity_tela_editar_publicacao.xml.flat",
+        "source": "com.example.teste1.app-main-53:/layout/activity_tela_editar_publicacao.xml"
+    },
+    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_form_login.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_form_login.xml"
     },
@@ -86,10 +90,6 @@
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/xml_data_extraction_rules.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/xml/data_extraction_rules.xml"
-    },
-    {
-        "merged": "com.example.teste1.app-debug-51:/layout_activity_tela_configuracoes.xml.flat",
-        "source": "com.example.teste1.app-main-53:/layout/activity_tela_configuracoes.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_launcher_background.xml.flat",
@@ -170,9 +170,5 @@
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/xml_backup_rules.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/xml/backup_rules.xml"
-    },
-    {
-        "merged": "com.example.teste1.app-debug-51:/layout_activity_tela_perfil.xml.flat",
-        "source": "com.example.teste1.app-main-53:/layout/activity_tela_perfil.xml"
     }
 ]

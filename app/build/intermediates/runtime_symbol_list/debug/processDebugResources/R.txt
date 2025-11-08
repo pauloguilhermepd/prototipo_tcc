@@ -3950,6 +3950,7 @@ int layout activity_item_publicacao 0x7f0c0022
 int layout activity_tela_comentarios 0x7f0c0023
 int layout activity_tela_configuracoes 0x7f0c009a
 int layout activity_tela_editar_perfil 0x7f0c009b
+int layout activity_tela_editar_publicacao 0x7f0c009c
 int layout activity_tela_perfil 0x7f0c0024
 int layout activity_tela_principal 0x7f0c0025
 int layout browser_actions_context_menu_page 0x7f0c0026
