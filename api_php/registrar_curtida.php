@@ -16,13 +16,11 @@ $check->execute();
 $result = $check->get_result();
 
 if ($result->num_rows > 0) {
-    // Já curtiu → remove curtida
     $delete = $conn->prepare("DELETE FROM curtidas WHERE id_publicacao = ? AND id_perfil_usuario = ?");
     $delete->bind_param("is", $id_publicacao, $id_perfil_usuario);
     $delete->execute();
     echo json_encode(["status" => "removido"]);
 } else {
-    // Não curtiu → adiciona curtida
     $insert = $conn->prepare("INSERT INTO curtidas (id_publicacao, id_perfil_usuario) VALUES (?, ?)");
     $insert->bind_param("is", $id_publicacao, $id_perfil_usuario);
     $insert->execute();

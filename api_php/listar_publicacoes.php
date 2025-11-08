@@ -7,6 +7,7 @@ $sql = "SELECT
     p.titulo,
     p.descricao,
     p.foto,
+    p.id_perfil_usuario,
     u.nome_completo AS autor_nome,
     u.foto_perfil AS autor_foto,
     (SELECT COUNT(*) FROM curtidas c WHERE c.id_publicacao = p.id_publicacoes) AS curtidas

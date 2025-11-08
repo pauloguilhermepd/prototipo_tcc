@@ -2,7 +2,7 @@
 header('Content-Type: application/json; charset=UTF-8');
 include("conexao.php");
 
-error_reporting(E_ALL); // evita quebrar JSON
+error_reporting(E_ALL);
 
 $uid = $_REQUEST['uid'] ?? '';
 $nome = $_REQUEST['nome'] ?? '';
