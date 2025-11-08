@@ -19,7 +19,6 @@ else {
         $perfil = $result_perfil->fetch_assoc();
         $id_perfil_usuario = $perfil['id_perfil_usuario'];
 
-        // Verifica se o estilo foi registrado
         $sql_estilo = $conn->prepare("SELECT id_usu_estilo FROM usu_estilo WHERE id_perfil_usuario = ?");
         $sql_estilo->bind_param("s", $id_perfil_usuario);
         $sql_estilo->execute();

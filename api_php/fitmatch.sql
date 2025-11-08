@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 07/11/2025 às 01:25
+-- Tempo de geração: 08/11/2025 às 03:17
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -44,8 +44,7 @@ INSERT INTO `comentario` (`id_comentario`, `comentarios`, `data_comentario`, `id
 (4, 'teste 1', '2025-11-06 16:35:47', 6, 'IPHZy0rvw3QVrjRdnAFPhf5jwN82'),
 (5, 'muito legal', '2025-11-06 17:19:37', 8, '8MySXJfLLdcOaOojxMwWSnXNtU12'),
 (6, 'super legal', '2025-11-06 17:26:16', 8, '8MySXJfLLdcOaOojxMwWSnXNtU12'),
-(7, 'eu também achei legal', '2025-11-06 20:28:18', 8, 'ruLeFh5LwvZVConKhJyFAyQrYaI2'),
-(8, 'olá teste legal', '2025-11-06 21:15:11', 9, 'IPHZy0rvw3QVrjRdnAFPhf5jwN82');
+(7, 'eu também achei legal', '2025-11-06 20:28:18', 8, 'ruLeFh5LwvZVConKhJyFAyQrYaI2');
 
 -- --------------------------------------------------------
 
@@ -73,8 +72,7 @@ INSERT INTO `curtidas` (`id_curtida`, `id_publicacao`, `id_perfil_usuario`) VALU
 (13, 5, '8MySXJfLLdcOaOojxMwWSnXNtU12'),
 (14, 3, '8MySXJfLLdcOaOojxMwWSnXNtU12'),
 (15, 8, '8MySXJfLLdcOaOojxMwWSnXNtU12'),
-(16, 8, 'ruLeFh5LwvZVConKhJyFAyQrYaI2'),
-(17, 9, 'IPHZy0rvw3QVrjRdnAFPhf5jwN82');
+(16, 8, 'ruLeFh5LwvZVConKhJyFAyQrYaI2');
 
 -- --------------------------------------------------------
 
@@ -95,7 +93,7 @@ CREATE TABLE `estilos` (
 INSERT INTO `estilos` (`id_estilo`, `estilo`, `sub_estilo`) VALUES
 (7, 'Punk', 'super teste legal 1'),
 (8, 'Punk', 'jajajaja'),
-(9, 'Cottage', 'super legal ne');
+(11, 'Punk', 'puncker veir');
 
 -- --------------------------------------------------------
 
@@ -118,8 +116,7 @@ CREATE TABLE `perfil_usuario` (
 
 INSERT INTO `perfil_usuario` (`id_perfil_usuario`, `nome_completo`, `data_nascimento`, `biografia`, `pronomes`, `foto_perfil`) VALUES
 ('8MySXJfLLdcOaOojxMwWSnXNtU12', 'teste 2 da silva', '2006-05-05', 'jajajakajshhahs', 'O', 0x75706c6f6164732f363930636661326662323331315f313030303135373839362e6a7067),
-('IPHZy0rvw3QVrjRdnAFPhf5jwN82', 'testeteste', '2006-05-06', 'kakakajsiisjwjx', 'A', 0x75706c6f6164732f363930643237323062623932325f313030303136313135322e6a7067),
-('ruLeFh5LwvZVConKhJyFAyQrYaI2', 'testesinhso da silva', '2005-03-03', 'stehajaja', 'A', 0x75706c6f6164732f363930643265656534316133395f313030303135373839302e6a7067);
+('IPHZy0rvw3QVrjRdnAFPhf5jwN82', 'testeteste', '2006-05-06', 'kakakajsiisjwjx', 'A', 0x75706c6f6164732f363930643237323062623932325f313030303136313135322e6a7067);
 
 -- --------------------------------------------------------
 
@@ -144,8 +141,7 @@ INSERT INTO `publicacoes` (`id_publicacoes`, `descricao`, `foto`, `titulo`, `id_
 (5, 'kakskakaka', 0x75706c6f6164732f363930613361343039383037655f313030303135393438302e6a7067, 'ajksjjs', 'IPHZy0rvw3QVrjRdnAFPhf5jwN82'),
 (6, 'jakakaka', 0x75706c6f6164732f363930613363373635626139385f313030303135393833382e6a7067, 'testets', 'IPHZy0rvw3QVrjRdnAFPhf5jwN82'),
 (7, 'jqjajaja', 0x75706c6f6164732f363930613364303237636435315f313030303135393438302e6a7067, 'jajajaka', 'IPHZy0rvw3QVrjRdnAFPhf5jwN82'),
-(8, 'Super estilo do meu mano tyler', 0x75706c6f6164732f363930643032633538613932395f313030303135373139372e6a7067, 'Tyler no carro super drip', '8MySXJfLLdcOaOojxMwWSnXNtU12'),
-(9, 'teste denovo', 0x75706c6f6164732f363930643332303331663436615f313030303135373139372e6a7067, 'ajjskakda', 'IPHZy0rvw3QVrjRdnAFPhf5jwN82');
+(8, 'Super estilo do meu mano tyler', 0x75706c6f6164732f363930643032633538613932395f313030303135373139372e6a7067, 'Tyler no carro super drip', '8MySXJfLLdcOaOojxMwWSnXNtU12');
 
 -- --------------------------------------------------------
 
@@ -165,8 +161,7 @@ CREATE TABLE `usu_estilo` (
 
 INSERT INTO `usu_estilo` (`id_usu_estilo`, `id_estilo`, `id_perfil_usuario`) VALUES
 (3, 7, 'IPHZy0rvw3QVrjRdnAFPhf5jwN82'),
-(4, 8, '8MySXJfLLdcOaOojxMwWSnXNtU12'),
-(5, 9, 'ruLeFh5LwvZVConKhJyFAyQrYaI2');
+(4, 8, '8MySXJfLLdcOaOojxMwWSnXNtU12');
 
 --
 -- Índices para tabelas despejadas
@@ -221,31 +216,31 @@ ALTER TABLE `usu_estilo`
 -- AUTO_INCREMENT de tabela `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `curtidas`
 --
 ALTER TABLE `curtidas`
-  MODIFY `id_curtida` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_curtida` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `estilos`
 --
 ALTER TABLE `estilos`
-  MODIFY `id_estilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_estilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de tabela `publicacoes`
 --
 ALTER TABLE `publicacoes`
-  MODIFY `id_publicacoes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_publicacoes` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `usu_estilo`
 --
 ALTER TABLE `usu_estilo`
-  MODIFY `id_usu_estilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_usu_estilo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Restrições para tabelas despejadas
@@ -255,13 +250,13 @@ ALTER TABLE `usu_estilo`
 -- Restrições para tabelas `comentario`
 --
 ALTER TABLE `comentario`
-  ADD CONSTRAINT `fk_publicacao_comentario` FOREIGN KEY (`id_publicacoes`) REFERENCES `publicacoes` (`id_publicacoes`);
+  ADD CONSTRAINT `fk_publicacao_comentario` FOREIGN KEY (`id_publicacoes`) REFERENCES `publicacoes` (`id_publicacoes`) ON DELETE CASCADE;
 
 --
 -- Restrições para tabelas `curtidas`
 --
 ALTER TABLE `curtidas`
-  ADD CONSTRAINT `fk_publicacao_curtida` FOREIGN KEY (`id_publicacao`) REFERENCES `publicacoes` (`id_publicacoes`);
+  ADD CONSTRAINT `fk_publicacao_curtida` FOREIGN KEY (`id_publicacao`) REFERENCES `publicacoes` (`id_publicacoes`) ON DELETE CASCADE;
 
 --
 -- Restrições para tabelas `publicacoes`
