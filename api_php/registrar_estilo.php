@@ -20,8 +20,8 @@ $stmt->bind_param("ss", $estilo, $sub_estilo);
 if ($stmt->execute()) {
     $id_estilo = $conn->insert_id;
 
-    $stmt2 = $conn->prepare("INSERT INTO usu_estilo (id_perfil_usuario, id_estilo) VALUES (?, ?)");
-    $stmt2->bind_param("si", $id_perfil_usuario, $id_estilo);
+    $stmt2 = $conn->prepare("INSERT INTO usu_estilo (id_estilo, id_perfil_usuario) VALUES (?, ?)");
+    $stmt2->bind_param("is", $id_estilo, $id_perfil_usuario);
 
     if ($stmt2->execute()) {
         echo json_encode([
