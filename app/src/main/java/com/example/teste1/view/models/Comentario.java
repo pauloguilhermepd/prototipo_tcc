@@ -13,6 +13,10 @@ public class Comentario {
         this.id_usuario = id_usuario;
     }
 
+    public String getId_usuario() {
+        return id_usuario;
+    }
+
     public String getAutor_foto() {
         return autor_foto;
     }

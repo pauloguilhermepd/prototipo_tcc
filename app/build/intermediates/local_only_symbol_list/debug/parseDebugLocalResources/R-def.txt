@@ -32,6 +32,7 @@ id btn_entrar
 id btn_enviar_comentario
 id btn_excluir_perfil
 id btn_prosseguir
+id btn_salvar_edicao_publi
 id cim_configuracoes
 id cim_foto_edit_perfil
 id cim_foto_perfil
@@ -39,6 +40,7 @@ id edit_bio_editar
 id edit_bio_registro
 id edit_data_editar
 id edit_data_registro
+id edit_descricao_editar
 id edit_descricao_publi
 id edit_email_cadastro
 id edit_email_login
@@ -47,10 +49,12 @@ id edit_nome_registro
 id edit_senha_cadastro
 id edit_senha_login
 id edit_subestilo
+id edit_titulo_editar
 id edit_titulo_publi
 id edt_comentario
 id img_autor
 id img_autor_coment
+id img_editar_publicacao
 id img_publicacao
 id layout_acoes
 id main

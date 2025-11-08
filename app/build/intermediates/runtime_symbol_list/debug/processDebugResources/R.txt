@@ -3323,6 +3323,7 @@ int id btn_enviar_comentario 0x7f090071
 int id btn_excluir_perfil 0x7f09026d
 int id btn_holder 0x7f090072
 int id btn_prosseguir 0x7f090073
+int id btn_salvar_edicao_publi 0x7f09026e
 int id buttonPanel 0x7f090076
 int id button_continue 0x7f090077
 int id button_create 0x7f090078
@@ -3417,6 +3418,7 @@ int id edit_bio_editar 0x7f090269
 int id edit_bio_registro 0x7f0900ce
 int id edit_data_editar 0x7f09026a
 int id edit_data_registro 0x7f0900cf
+int id edit_descricao_editar 0x7f09026f
 int id edit_descricao_publi 0x7f0900d0
 int id edit_email_cadastro 0x7f0900d1
 int id edit_email_login 0x7f0900d2
@@ -3428,6 +3430,7 @@ int id edit_senha_cadastro 0x7f0900d6
 int id edit_senha_login 0x7f0900d7
 int id edit_subestilo 0x7f0900d8
 int id edit_text_id 0x7f0900d9
+int id edit_titulo_editar 0x7f090270
 int id edit_titulo_publi 0x7f0900da
 int id edt_comentario 0x7f0900db
 int id elastic 0x7f0900dc
@@ -3493,6 +3496,7 @@ int id ignoreRequest 0x7f090117
 int id image 0x7f090118
 int id img_autor 0x7f090119
 int id img_autor_coment 0x7f09011a
+int id img_editar_publicacao 0x7f090271
 int id img_publicacao 0x7f09011b
 int id immediateStop 0x7f09011c
 int id included 0x7f09011d

@@ -8,10 +8,8 @@ import com.example.teste1.view.models.Publicacao;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 
-import com.example.teste1.view.RespostasRegistros.RegistroPerfilEstilo;
 import com.example.teste1.view.RespostasRegistros.RespostaRegistroEstilo;
 import com.example.teste1.view.RespostasRegistros.RespostaRegistroPerfil;
-import com.example.teste1.view.models.Usuario;
 import com.example.teste1.view.verification.VerificacaoUsuario;
 
 import java.util.List;
@@ -31,7 +29,15 @@ public interface ApiService {
     );
 
     @GET("listar_publicacoes.php")
-    Call<List<Publicacao>> listarPublicacoes();
+    Call<List<Publicacao>> listarPublicacoes(@Query("uid") String uid); // Adicione @Query("uid")
+
+    // ...
+
+    @GET("listar_publicacoes_usuario.php")
+    Call<List<Publicacao>> listarPublicacoesDoUsuario(
+            @Query("uid") String uidPerfil, // uid do dono do perfil
+            @Query("uid_logado") String uidLogado // uid do usuário logado
+    );
 
 
     @FormUrlEncoded
@@ -56,6 +62,21 @@ public interface ApiService {
             @Field("id_publicacoes") int idPublicacoes,
             @Field("id_usuario") String idUsuario,
             @Field("comentarios") String comentarios
+    );
+
+    @FormUrlEncoded
+    @POST("excluir_comentario.php")
+    Call<RespostaRegistroPerfil> excluirComentario(
+            @Field("id_comentario") int idComentario,
+            @Field("id_usuario") String idUsuario
+    );
+
+    @FormUrlEncoded
+    @POST("editar_comentario.php")
+    Call<RespostaRegistroPerfil> editarComentario(
+            @Field("id_comentario") int idComentario,
+            @Field("id_usuario") String idUsuario,
+            @Field("novo_texto") String novoTexto
     );
 
     @GET("listar_comentarios.php")
@@ -104,9 +125,17 @@ public interface ApiService {
             @Field("id_usuario") String idUsuario
     );
 
+    @Multipart
+    @POST("editar_publicacao.php")
+    Call<RespostaRegistroPerfil> editarPublicacao(
+            @Part("uid") RequestBody uidBody,
+            @Part("id_publicacao") RequestBody idPublicacaoBody,
+            @Part("titulo") RequestBody tituloBody,
+            @Part("descricao") RequestBody descricaoBody,
+            @Part MultipartBody.Part imagem_publi
+    );
 
 
-    @GET("listar_publicacoes_usuario.php")
-    Call<List<Publicacao>> listarPublicacoesDoUsuario(@Query("uid") String uid);
+
 
 }

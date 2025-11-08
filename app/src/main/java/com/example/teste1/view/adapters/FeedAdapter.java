@@ -55,59 +55,70 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         holder.txtTitulo.setText(pub.getTitulo());
         holder.txtDescricao.setText(pub.getDescricao());
         holder.txtAutorNome.setText(pub.getAutor_nome());
+
+        Glide.with(context).load(pub.getFoto()).into(holder.imgPublicacao);
+        Glide.with(context).load(pub.getAutor_foto()).into(holder.imgAutor);
+
+        holder.isCurtido = pub.getUsuario_curtiu() == 1;
         holder.txtNumCurtidas.setText(pub.getCurtidas() + " curtidas");
-
-        Glide.with(context)
-                .load(pub.getFoto())
-                .into(holder.imgPublicacao);
-
-        Glide.with(context)
-                .load(pub.getAutor_foto())
-                .into(holder.imgAutor);
+        holder.btnCurtir.setImageResource(
+                holder.isCurtido ? R.drawable.ic_like_filled : R.drawable.ic_like_outline
+        );
 
         holder.btnCurtir.setOnClickListener(v -> {
-                    ApiService api = ApiClient.getClient().create(ApiService.class);
-                    String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+            ApiService api = ApiClient.getClient().create(ApiService.class);
+            String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-                    api.registrarCurtida(pub.getId_publicacoes(), uid).enqueue(new Callback<RespostaRegistroCurtida>() {
-                        @Override
-                        public void onResponse(Call<RespostaRegistroCurtida> call, Response<RespostaRegistroCurtida> response) {
-                            if(response.isSuccessful()){
-                                RespostaRegistroCurtida resposta = response.body();
-                                String idPerfilUsuario = resposta.getIdPerfilUsuario();
-                                int idPublicacoes = resposta.getIdPublicacaoes();
-                            }
-                            boolean curtiu = holder.isCurtido;
-                            holder.isCurtido = !curtiu;
-                            holder.btnCurtir.setImageResource(
-                                    holder.isCurtido ? R.drawable.ic_like_filled : R.drawable.ic_like_outline
-                            );
+            api.registrarCurtida(pub.getId_publicacoes(), uid).enqueue(new Callback<RespostaRegistroCurtida>() {
+                @Override
+                public void onResponse(Call<RespostaRegistroCurtida> call, Response<RespostaRegistroCurtida> response) {
+                    // SÓ MUDA A UI DEPOIS QUE O SERVIDOR CONFIRMAR
+                    if (response.isSuccessful() && response.body() != null) {
+                        RespostaRegistroCurtida resposta = response.body();
+                        int novasCurtidas;
 
-                            int novasCurtidas = holder.isCurtido
-                                    ? pub.getCurtidas() + 1
-                                    : pub.getCurtidas() - 1;
-
-                            pub.setCurtidas(novasCurtidas);
-                            holder.txtNumCurtidas.setText(novasCurtidas + " curtidas");
+                        if ("curtido".equals(resposta.getStatus())) {
+                            holder.isCurtido = true;
+                            novasCurtidas = pub.getCurtidas() + 1;
+                        } else if ("removido".equals(resposta.getStatus())) {
+                            holder.isCurtido = false;
+                            novasCurtidas = pub.getCurtidas() - 1;
+                        } else {
+                            return;
                         }
 
-                        @Override
-                        public void onFailure(Call<RespostaRegistroCurtida> call, Throwable t) {
-                            Log.e("Curtida", "Erro: " + t.getMessage());
-                        }
-                    });
+                        pub.setCurtidas(novasCurtidas);
+
+                        holder.txtNumCurtidas.setText(novasCurtidas + " curtidas");
+                        holder.btnCurtir.setImageResource(
+                                holder.isCurtido ? R.drawable.ic_like_filled : R.drawable.ic_like_outline
+                        );
+                    } else {
+                        Log.e("Curtida", "Erro: Resposta não foi bem-sucedida.");
+                        Toast.makeText(context, "Erro ao processar curtida", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<RespostaRegistroCurtida> call, Throwable t) {
+                    Log.e("Curtida", "Erro: " + t.getMessage());
+                    Toast.makeText(context, "Falha na conexão", Toast.LENGTH_SHORT).show();
+                }
+            });
         });
+
 
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         holder.itemView.setOnLongClickListener(view -> {
-            if(uid.equals(pub.getId_perfil_usuario())){
+            if (uid.equals(pub.getId_perfil_usuario())) {
                 new AlertDialog.Builder(context).setTitle("Opções da publicação").setItems(new String[]{"Editar", "Excluir"}, ((dialog, which) -> {
-                    if(which == 0) {
+                    if (which == 0) {
                         Intent intent = new Intent(context, TelaEditarPublicacao.class);
                         intent.putExtra("ID_PUBLICACAO", pub.getId_publicacoes());
                         intent.putExtra("TITULO_ATUAL", pub.getTitulo());
                         intent.putExtra("DESCRICAO_ATUAL", pub.getDescricao());
+                        intent.putExtra("FOTO_ATUAL_URL", pub.getFoto());
                         context.startActivity(intent);
                     } else if (which == 1) {
                         excluirPublicacao(pub.getId_publicacoes(), uid, holder.getAdapterPosition());
@@ -118,9 +129,9 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         });
 
         holder.btnComentar.setOnClickListener(v -> {
-                    Intent intent = new Intent(context, TelaComentarios.class);
-                    intent.putExtra("id_publicacoes", pub.getId_publicacoes());
-                    context.startActivity(intent);
+            Intent intent = new Intent(context, TelaComentarios.class);
+            intent.putExtra("id_publicacoes", pub.getId_publicacoes());
+            context.startActivity(intent);
         });
     }
 
@@ -157,7 +168,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         CircleImageView imgAutor;
         ImageView imgPublicacao, btnCurtir, btnComentar;
         TextView txtTitulo, txtDescricao, txtAutorNome, txtNumCurtidas;
-        boolean isCurtido = false;
+        boolean isCurtido;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);

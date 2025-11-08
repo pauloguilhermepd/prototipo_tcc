@@ -142,7 +142,7 @@ public class TelaPerfil extends AppCompatActivity {
     private void carregarPublicacoesDoUsuario(String uid) {
         ApiService api = ApiClient.getClient().create(ApiService.class);
 
-        Call<List<Publicacao>> call = api.listarPublicacoesDoUsuario(uid);
+        Call<List<Publicacao>> call = api.listarPublicacoesDoUsuario(uid, uid);
 
         call.enqueue(new Callback<List<Publicacao>>() {
             @Override

@@ -9,9 +9,12 @@ package com.example.teste1.view.models;
         private String autor_foto;
         private int curtidas;
         private String id_perfil_usuario;
+        private int usuario_curtiu;
 
-        // Getters e Setters
 
+        public int getUsuario_curtiu() {
+            return usuario_curtiu;
+        }
 
         public String getId_perfil_usuario() {
             return id_perfil_usuario;

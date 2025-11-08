@@ -21,6 +21,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import android.content.Intent;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.example.teste1.view.formpublicacao.FormPublicacao;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
@@ -65,7 +66,9 @@ public class TelaPrincipal extends AppCompatActivity {
 
     private void carregarPublicacoes() {
         ApiService api = ApiClient.getClient().create(ApiService.class);
-        Call<List<Publicacao>> call = api.listarPublicacoes();
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        Call<List<Publicacao>> call = api.listarPublicacoes(uid);
 
         call.enqueue(new Callback<List<Publicacao>>() {
             @Override
