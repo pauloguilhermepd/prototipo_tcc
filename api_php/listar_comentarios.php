@@ -10,6 +10,7 @@ if (empty($id_publicacoes)) {
 }
 
 $sql = "SELECT c.id_comentario, c.comentarios, c.data_comentario, 
+               c.id_usuario,
                u.nome_completo AS autor_nome, u.foto_perfil AS autor_foto
         FROM comentario c
         JOIN perfil_usuario u ON c.id_usuario = u.id_perfil_usuario
