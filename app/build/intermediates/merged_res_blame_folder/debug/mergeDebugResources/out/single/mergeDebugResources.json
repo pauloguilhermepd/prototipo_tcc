@@ -12,36 +12,36 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_edit_text_background.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/edit_text_background.xml"
+    },
+    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_icons8_mais_50.png.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/icons8_mais_50.png"
-    },
-    {
-        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_form_registro.xml.flat",
-        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_form_registro.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/menu_menu_bottom_nav.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/menu/menu_bottom_nav.xml"
     },
     {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_form_registro.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_form_registro.xml"
+    },
+    {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.teste1.app-debug-51:/layout_activity_tela_editar_publicacao.xml.flat",
-        "source": "com.example.teste1.app-main-53:/layout/activity_tela_editar_publicacao.xml"
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_home.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/ic_home.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_form_login.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_form_login.xml"
-    },
-    {
-        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_home.xml.flat",
-        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/ic_home.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_tela_editar_publicacao.xml.flat",
@@ -96,6 +96,10 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/xml/data_extraction_rules.xml"
     },
     {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_email.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/ic_email.xml"
+    },
+    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_launcher_background.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/ic_launcher_background.xml"
     },
@@ -108,6 +112,10 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_tela_configuracoes.xml"
     },
     {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_tela_perfil.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_tela_perfil.xml"
+    },
+    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_form_publicacao.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_form_publicacao.xml"
     },
@@ -116,16 +124,16 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/icons8_mais_100.png"
     },
     {
-        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_tela_perfil.xml.flat",
-        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_tela_perfil.xml"
-    },
-    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/mipmap-mdpi_ic_launcher_round.webp.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_item_comentario.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_item_comentario.xml"
+    },
+    {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_lock.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/ic_lock.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/mipmap-xhdpi_ic_launcher.webp.flat",
@@ -156,12 +164,12 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/icons8_engrenagem_outline24.png"
     },
     {
-        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_like_outline.xml.flat",
-        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/ic_like_outline.xml"
-    },
-    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_form_estilo.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_form_estilo.xml"
+    },
+    {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_like_outline.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/ic_like_outline.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/mipmap-hdpi_ic_launcher.webp.flat",
@@ -174,5 +182,9 @@
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/xml_backup_rules.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.teste1.app-debug-51:/layout_activity_tela_perfil.xml.flat",
+        "source": "com.example.teste1.app-main-53:/layout/activity_tela_perfil.xml"
     }
 ]

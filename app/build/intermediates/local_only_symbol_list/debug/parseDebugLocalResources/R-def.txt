@@ -2,16 +2,23 @@ R_DEF: Internal format may change without notice
 local
 array lista_estilos
 array lista_pronomes
+color background_black
+color background_grey
 color black
+color hint_color
 color light_grey
+color pastel_orange
 color white
+drawable edit_text_background
 drawable ic_add
 drawable ic_comment
+drawable ic_email
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_like_filled
 drawable ic_like_outline
+drawable ic_lock
 drawable icons8_engrenagem_filled24
 drawable icons8_engrenagem_filled48
 drawable icons8_engrenagem_outline24
@@ -20,6 +27,7 @@ drawable icons8_mais_50
 drawable icons8_usuario_24
 drawable icons8_usuario_48
 drawable icons8_usuario_96
+id appbar
 id bottom_navigation
 id btn_cadastrar
 id btn_comentar

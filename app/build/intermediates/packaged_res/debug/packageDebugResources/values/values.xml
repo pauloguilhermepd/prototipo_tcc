@@ -11,8 +11,12 @@
         <item>Elu/Delu</item>
         <item>Outro</item>
     </string-array>
+    <color name="background_black">#191919</color>
+    <color name="background_grey">#848484</color>
     <color name="black">#FF000000</color>
+    <color name="hint_color">#F0E7E4</color>
     <color name="light_grey">#BCB3B3</color>
+    <color name="pastel_orange">#A47864</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">teste!</string>
     <string name="gcm_defaultSenderId" translatable="false">599750226943</string>
@@ -39,7 +43,7 @@
     <string name="txt_info_subestilo">SubEstilo é um estilo próprio seu. Descreva ele da sua maneira!</string>
     <string name="txt_insira_img">Insira uma imagem</string>
     <string name="txt_link_cadastrar">Não possui uma conta? Cadastre-se</string>
-    <string name="txt_link_login">Já possui uma conta? Entre</string>
+    <string name="txt_link_login">Já possui uma conta? Clique Aqui</string>
     <string name="txt_nome_completo_registro">Nome Completo:</string>
     <string name="txt_pronomes">Pronomes:</string>
     <string name="txt_prosseguir">Prosseguir</string>

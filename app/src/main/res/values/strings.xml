@@ -6,7 +6,7 @@
     <string name="txt_btn_cadastrar">Cadastrar</string>
     <string name="txt_link_cadastrar">Não possui uma conta? Cadastre-se</string>
     <string name="txt_foto_perfil">Foto de perfil</string>
-    <string name="txt_link_login">Já possui uma conta? Entre</string>
+    <string name="txt_link_login">Já possui uma conta? Clique Aqui</string>
     <string name="txt_btn_entrar">Entrar</string>
     <string name="titulo_form_login">Entre</string>
     <string name="titulo_form_registro">Bem vindo ao  FitMatch!</string>

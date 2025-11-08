@@ -1372,8 +1372,10 @@ color accent_material_dark
 color accent_material_light
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
+color background_black
 color background_floating_material_dark
 color background_floating_material_light
+color background_grey
 color background_material_dark
 color background_material_light
 color black
@@ -1465,6 +1467,7 @@ color fui_bgYahoo
 color fui_transparent
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color hint_color
 color light_grey
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
@@ -2123,6 +2126,7 @@ color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
+color pastel_orange
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -3080,6 +3084,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable edit_text_background
 drawable fui_ic_anonymous_white_24dp
 drawable fui_ic_apple_white_24dp
 drawable fui_ic_check_circle_black_128dp
@@ -3104,12 +3109,14 @@ drawable ic_call_decline_low
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_comment
+drawable ic_email
 drawable ic_home
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_like_filled
 drawable ic_like_outline
+drawable ic_lock
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
@@ -3288,6 +3295,7 @@ id animateToEnd
 id animateToStart
 id antiClockwise
 id anticipate
+id appbar
 id arc
 id asConfigured
 id async
