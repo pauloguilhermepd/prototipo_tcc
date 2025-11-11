@@ -1,16 +1,16 @@
-#Mon Nov 10 22:01:02 BRT 2025
-base.0=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.10=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
-base.11=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeExtDexDebug/classes3.dex
-base.2=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
-base.3=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/12/classes.dex
-base.4=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/3/classes.dex
-base.5=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.6=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/5/classes.dex
-base.7=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/6/classes.dex
-base.8=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
-base.9=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/8/classes.dex
+#Tue Nov 11 16:21:40 BRT 2025
+base.0=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.1=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.10=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.11=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes3.dex
+base.2=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\10\\classes.dex
+base.3=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\12\\classes.dex
+base.4=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+base.5=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
+base.6=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\5\\classes.dex
+base.7=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.8=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
+base.9=C\:\\tcc\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\8\\classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.10=classes2.dex
