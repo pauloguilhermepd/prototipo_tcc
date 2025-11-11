@@ -29,14 +29,14 @@ public interface ApiService {
     );
 
     @GET("listar_publicacoes.php")
-    Call<List<Publicacao>> listarPublicacoes(@Query("uid") String uid); // Adicione @Query("uid")
+    Call<List<Publicacao>> listarPublicacoes(@Query("uid") String uid);
 
     // ...
 
     @GET("listar_publicacoes_usuario.php")
     Call<List<Publicacao>> listarPublicacoesDoUsuario(
-            @Query("uid") String uidPerfil, // uid do dono do perfil
-            @Query("uid_logado") String uidLogado // uid do usuário logado
+            @Query("uid") String uidPerfil,
+            @Query("uid_logado") String uidLogado
     );
 
 

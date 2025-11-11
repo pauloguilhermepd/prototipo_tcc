@@ -12,6 +12,10 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_tela_editar_perfil.xml"
     },
     {
+        "merged": "com.example.teste1.app-mergeDebugResources-50:/layout/activity_item_comentario.xml",
+        "source": "com.example.teste1.app-main-53:/layout/activity_item_comentario.xml"
+    },
+    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-mergeDebugResources-50:/layout/activity_tela_editar_publicacao.xml",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_tela_editar_publicacao.xml"
     },
@@ -48,11 +52,15 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_form_cadastro.xml"
     },
     {
-        "merged": "com.example.teste1.app-mergeDebugResources-50:/layout/activity_tela_perfil.xml",
-        "source": "com.example.teste1.app-main-53:/layout/activity_tela_perfil.xml"
+        "merged": "com.example.teste1.app-mergeDebugResources-50:/layout/activity_tela_principal.xml",
+        "source": "com.example.teste1.app-main-53:/layout/activity_tela_principal.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-mergeDebugResources-50:/layout/activity_form_login.xml",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_form_login.xml"
+    },
+    {
+        "merged": "com.example.teste1.app-mergeDebugResources-50:/layout/activity_tela_comentarios.xml",
+        "source": "com.example.teste1.app-main-53:/layout/activity_tela_comentarios.xml"
     }
 ]

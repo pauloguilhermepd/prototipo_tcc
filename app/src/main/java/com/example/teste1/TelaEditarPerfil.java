@@ -228,7 +228,7 @@ public class TelaEditarPerfil extends AppCompatActivity {
                                 Bitmap bitmap = BitmapFactory.decodeByteArray(imagemBytes, 0, imagemBytes.length);
                                 imgPerfil.setImageBitmap(bitmap);
                             } else {
-                                String url = "https://abby-unbeaued-tyron.ngrok-free.dev/api_php/" + foto;
+                                String url = "https://interword-everleigh-coordinately.ngrok-free.dev/api_php/" + foto;
                                 Glide.with(TelaEditarPerfil.this).load(url).into(imgPerfil);
                             }
 

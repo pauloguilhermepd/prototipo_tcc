@@ -23,6 +23,7 @@ import com.example.teste1.view.RespostasRegistros.RespostaRegistroCurtida;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
 import com.example.teste1.view.models.Publicacao;
+import com.example.teste1.view.telas_usuario.TelaPerfil;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
@@ -59,10 +60,25 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
         Glide.with(context).load(pub.getFoto()).into(holder.imgPublicacao);
         Glide.with(context).load(pub.getAutor_foto()).into(holder.imgAutor);
 
+        String autorUID = pub.getId_perfil_usuario();
+
+        View.OnClickListener listenerPerfil = v -> {
+            if (autorUID.equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+                return;
+            }
+            Intent intent = new Intent(context, TelaPerfil.class);
+            intent.putExtra("uid_perfil", autorUID);
+            context.startActivity(intent);
+        };
+
+// Aplique o listener à foto e ao nome
+        holder.imgAutor.setOnClickListener(listenerPerfil);
+        holder.txtAutorNome.setOnClickListener(listenerPerfil);
+
         holder.isCurtido = pub.getUsuario_curtiu() == 1;
         holder.txtNumCurtidas.setText(pub.getCurtidas() + " curtidas");
         holder.btnCurtir.setImageResource(
-                holder.isCurtido ? R.drawable.ic_like_filled : R.drawable.ic_like_outline
+                holder.isCurtido ? R.drawable.ic_like_filled : R.drawable.ic_like_white
         );
 
         holder.btnCurtir.setOnClickListener(v -> {
@@ -91,7 +107,7 @@ public class FeedAdapter extends RecyclerView.Adapter<FeedAdapter.ViewHolder> {
 
                         holder.txtNumCurtidas.setText(novasCurtidas + " curtidas");
                         holder.btnCurtir.setImageResource(
-                                holder.isCurtido ? R.drawable.ic_like_filled : R.drawable.ic_like_outline
+                                holder.isCurtido ? R.drawable.ic_like_filled : R.drawable.ic_like_white
                         );
                     } else {
                         Log.e("Curtida", "Erro: Resposta não foi bem-sucedida.");

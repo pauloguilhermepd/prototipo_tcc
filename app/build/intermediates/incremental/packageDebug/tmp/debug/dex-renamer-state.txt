@@ -1,4 +1,4 @@
-#Sat Nov 08 18:19:22 BRT 2025
+#Mon Nov 10 22:01:02 BRT 2025
 base.0=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 base.1=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
 base.10=/home/paulo/prototipo_tcc/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex

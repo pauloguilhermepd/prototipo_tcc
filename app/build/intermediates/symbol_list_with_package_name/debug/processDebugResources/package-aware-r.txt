@@ -3109,6 +3109,7 @@ drawable ic_call_decline_low
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_comment
+drawable ic_comment_white
 drawable ic_email
 drawable ic_home
 drawable ic_keyboard_black_24dp
@@ -3116,6 +3117,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_like_filled
 drawable ic_like_outline
+drawable ic_like_white
 drawable ic_lock
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
@@ -3209,6 +3211,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable pastel_orange_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light

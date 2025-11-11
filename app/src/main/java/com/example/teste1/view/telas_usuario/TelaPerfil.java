@@ -3,6 +3,7 @@ package com.example.teste1.view.telas_usuario;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -44,6 +45,8 @@ public class TelaPerfil extends AppCompatActivity {
     private String uid;
     private FeedAdapter feedAdapter;
     private CircleImageView imgConfig;
+    private String uidLogado;
+    private String uidDoPerfil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,12 +59,27 @@ public class TelaPerfil extends AppCompatActivity {
         txtBio = findViewById(R.id.tp_bio);
         txtEstilo = findViewById(R.id.tp_estilo);
         txtSubestilo = findViewById(R.id.tp_subestilo);
-        imgConfig = findViewById(R.id.cim_configuracoes);
-        auth = FirebaseAuth.getInstance();
-        uid = auth.getCurrentUser().getUid();
-
+        imgConfig = findViewById(R.id.cim_configuracoes); //
         recyclerPerfil = findViewById(R.id.recycler_publicacoes_perfil);
         recyclerPerfil.setLayoutManager(new LinearLayoutManager(this));
+
+        auth = FirebaseAuth.getInstance();
+        uidLogado = auth.getCurrentUser().getUid();
+
+        String uidPerfilVisitado = getIntent().getStringExtra("uid_perfil");
+
+        if (uidPerfilVisitado != null && !uidPerfilVisitado.isEmpty()) {
+            uidDoPerfil = uidPerfilVisitado;
+            imgConfig.setVisibility(View.GONE);
+        } else {
+            uidDoPerfil = uidLogado;
+            imgConfig.setVisibility(View.VISIBLE);
+            imgConfig.setOnClickListener(view -> {
+                Intent intent = new Intent(TelaPerfil.this, TelaConfiguracoes.class);
+                startActivity(intent);
+                finish();
+            });
+        }
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnItemSelectedListener(item -> {
@@ -74,20 +92,18 @@ public class TelaPerfil extends AppCompatActivity {
                 Intent intent = new Intent(TelaPerfil.this, FormPublicacao.class);
                 startActivity(intent);
                 return true;
-            } else return id == R.id.nav_perfil;
+            } else if (id == R.id.nav_perfil) {
+                if (!uidDoPerfil.equals(uidLogado)) {
+                    Intent intent = new Intent(TelaPerfil.this, TelaPerfil.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+                return true;
+            }
+            return false;
         });
-
-        carregarPerfil(uid);
-
-        carregarPublicacoesDoUsuario(uid);
-
-        imgConfig.setOnClickListener(view -> {
-            Intent intent = new Intent(TelaPerfil.this, TelaConfiguracoes.class);
-            startActivity(intent);
-            finish();
-        });
-
-
+        carregarPerfil(uidDoPerfil);
+        carregarPublicacoesDoUsuario(uidDoPerfil);
     }
 
     private void carregarPerfil(String uid) {
@@ -116,7 +132,7 @@ public class TelaPerfil extends AppCompatActivity {
                                 Bitmap bitmap = BitmapFactory.decodeByteArray(imagemBytes, 0, imagemBytes.length);
                                 imgPerfil.setImageBitmap(bitmap);
                             } else {
-                                String url = "https://abby-unbeaued-tyron.ngrok-free.dev/api_php/" + foto;
+                                String url = "https://interword-everleigh-coordinately.ngrok-free.dev/api_php/" + foto;
                                 Glide.with(TelaPerfil.this).load(url).into(imgPerfil);
                             }
 
@@ -139,10 +155,9 @@ public class TelaPerfil extends AppCompatActivity {
 
     }
 
-    private void carregarPublicacoesDoUsuario(String uid) {
+    private void carregarPublicacoesDoUsuario(String uidDoPerfil) {
         ApiService api = ApiClient.getClient().create(ApiService.class);
-
-        Call<List<Publicacao>> call = api.listarPublicacoesDoUsuario(uid, uid);
+        Call<List<Publicacao>> call = api.listarPublicacoesDoUsuario(uidDoPerfil, uidLogado); //
 
         call.enqueue(new Callback<List<Publicacao>>() {
             @Override

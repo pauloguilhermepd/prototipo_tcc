@@ -12,12 +12,14 @@ color white
 drawable edit_text_background
 drawable ic_add
 drawable ic_comment
+drawable ic_comment_white
 drawable ic_email
 drawable ic_home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_like_filled
 drawable ic_like_outline
+drawable ic_like_white
 drawable ic_lock
 drawable icons8_engrenagem_filled24
 drawable icons8_engrenagem_filled48
@@ -27,6 +29,7 @@ drawable icons8_mais_50
 drawable icons8_usuario_24
 drawable icons8_usuario_48
 drawable icons8_usuario_96
+drawable pastel_orange_background
 id appbar
 id bottom_navigation
 id btn_cadastrar

@@ -21,6 +21,7 @@ import com.example.teste1.view.RespostasRegistros.RespostaRegistroPerfil;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
 import com.example.teste1.view.models.Comentario;
+import com.example.teste1.view.telas_usuario.TelaPerfil;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
@@ -59,6 +60,19 @@ public class ComentarioAdapter extends RecyclerView.Adapter<ComentarioAdapter.Vi
 
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+        String autorUID = c.getId_usuario(); //
+
+        View.OnClickListener listenerPerfil = v -> {
+            if (autorUID.equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+                return;
+            }
+            Intent intent = new Intent(context, TelaPerfil.class);
+            intent.putExtra("uid_perfil", autorUID);
+            context.startActivity(intent);
+        };
+
+        holder.imgAutor.setOnClickListener(listenerPerfil);
+        holder.txtAutor.setOnClickListener(listenerPerfil);
         holder.itemView.setOnLongClickListener(view -> {
             if(uid.equals(c.getId_usuario())){
 

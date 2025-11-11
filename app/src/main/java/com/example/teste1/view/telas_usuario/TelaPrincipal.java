@@ -46,7 +46,6 @@ public class TelaPrincipal extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
             if (id == R.id.nav_home) {
-                // Já está na tela principal
                 return true;
             } else if (id == R.id.nav_publicar) {
                 Intent intent = new Intent(TelaPrincipal.this, FormPublicacao.class);

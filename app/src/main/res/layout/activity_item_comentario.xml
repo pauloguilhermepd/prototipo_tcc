@@ -6,7 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".item_comentario"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:layout_marginTop="50dp"
+    android:background="@color/background_black">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_autor_coment"
@@ -25,13 +27,15 @@
             android:textStyle="bold"
             android:textSize="14sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/hint_color"/>
 
         <TextView
             android:id="@+id/txt_texto_coment"
             android:textSize="14sp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/hint_color"/>
     </LinearLayout>
 
 </LinearLayout>
