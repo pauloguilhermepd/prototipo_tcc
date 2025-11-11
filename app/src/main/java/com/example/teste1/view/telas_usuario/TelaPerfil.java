@@ -97,6 +97,7 @@ public class TelaPerfil extends AppCompatActivity {
                     Intent intent = new Intent(TelaPerfil.this, TelaPerfil.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
+                    return true;
                 }
                 return true;
             }
@@ -116,12 +117,27 @@ public class TelaPerfil extends AppCompatActivity {
                 RespostaBuscarUsuario resposta = response.body();
                 if (response.isSuccessful() && response.body() != null) {
                     Usuario usuario = resposta.getUsuario();
+                    String pronomes = usuario.getPronomes();
+
+                    if(pronomes.equals("A")){
+                        pronomes = "Ela/Dela";
+                    } else if(pronomes.equals("E")){
+                        pronomes = "Ele/Dele";
+                    } else if(pronomes.equals("U")){
+                        pronomes = "Elu/Delu";
+                    } else if(pronomes.equals("A")){
+                        pronomes = "Ela/Dela";
+                    } else if(pronomes.equals("O")){
+                        pronomes = "Outro";
+                    }
 
                     txtNome.setText(usuario.getNome_completo());
-                    txtPronome.setText(usuario.getPronomes());
+                    txtPronome.setText(pronomes);
                     txtBio.setText(usuario.getBiografia());
                     txtEstilo.setText(usuario.getEstilo());
                     txtSubestilo.setText(usuario.getSub_estilo());
+
+
 
                     if (usuario.getFoto_perfil() != null && !usuario.getFoto_perfil().isEmpty()) {
                         try {

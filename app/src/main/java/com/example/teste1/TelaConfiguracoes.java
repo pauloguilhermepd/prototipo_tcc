@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
+import com.example.teste1.view.formregistro.FormRegistro;
 import com.example.teste1.view.telas_usuario.TelaPrincipal;
 import com.example.teste1.view.telas_usuario.TelaPerfil;
 import com.google.firebase.auth.FirebaseAuth;
@@ -58,14 +59,14 @@ public class TelaConfiguracoes extends AppCompatActivity {
                                             if (task.isSuccessful()) {
                                                 Toast.makeText(TelaConfiguracoes.this, "Perfil excluído com sucesso", Toast.LENGTH_SHORT).show();
 
-                                                Intent intent = new Intent(TelaConfiguracoes.this, TelaPrincipal.class);
+                                                Intent intent = new Intent(TelaConfiguracoes.this, FormRegistro.class);
                                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                 startActivity(intent);
                                                 finish();
                                             } else {
                                                 Toast.makeText(TelaConfiguracoes.this, "Dados do perfil excluídos, mas falha ao excluir conta. Faça login novamente.", Toast.LENGTH_LONG).show();
                                                 FirebaseAuth.getInstance().signOut();
-                                                Intent intent = new Intent(TelaConfiguracoes.this, TelaPrincipal.class);
+                                                Intent intent = new Intent(TelaConfiguracoes.this, FormRegistro.class);
                                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                 startActivity(intent);
                                                 finish();

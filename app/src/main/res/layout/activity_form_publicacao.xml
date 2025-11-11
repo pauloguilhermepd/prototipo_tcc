@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.formpublicacao.FormPublicacao"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background_black">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +16,7 @@
         android:layout_marginTop="20dp"
         android:textSize="20sp"
         android:text="@string/titulo_form_publi"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold"
         />
 
@@ -27,6 +28,7 @@
         android:layout_gravity="center"
         android:text="@string/txt_insira_img"
         android:textStyle="bold"
+        android:textColor="@color/white"
         />
 
     <ImageView
@@ -50,13 +52,14 @@
         android:textSize="20sp"
         android:text="@string/txt_titulo_publi"
         android:textStyle="bold"
+        android:textColor="@color/white"
         />
 
     <EditText
         android:id="@+id/edit_titulo_publi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
+        android:background="@drawable/edit_text_background"
         android:padding="10dp"
         android:maxLines="1"
         android:layout_marginStart="20dp"
@@ -65,6 +68,7 @@
         android:layout_gravity="center"
         android:autofillHints="name"
         android:inputType="text"
+        android:textColor="@color/hint_color"
         />
 
     <TextView
@@ -75,13 +79,14 @@
         android:textSize="20sp"
         android:text="@string/txt_descricao_publi"
         android:textStyle="bold"
+        android:textColor="@color/white"
         />
 
     <EditText
         android:id="@+id/edit_descricao_publi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
+        android:background="@drawable/edit_text_background"
         android:padding="10dp"
         android:maxLines="1"
         android:layout_marginStart="20dp"
@@ -90,6 +95,7 @@
         android:layout_gravity="center"
         android:autofillHints="name"
         android:inputType="text"
+        android:textColor="@color/hint_color"
         />
 
     <Button
@@ -103,6 +109,8 @@
         android:layout_gravity="center"
         android:text="@string/txt_btn_criar_publi"
         android:textSize="20sp"
+        android:backgroundTint="@color/pastel_orange"
+        android:textColor="@color/hint_color"
         />
 
 

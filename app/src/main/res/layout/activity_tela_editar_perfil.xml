@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TelaEditarPerfil"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background_black">
 
 
     <TextView
@@ -17,6 +18,7 @@
         android:layout_gravity="center"
         android:text="@string/txt_foto_perfil"
         android:textStyle="bold"
+        android:textColor="@color/hint_color"
         />
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -40,16 +42,19 @@
         android:textSize="20sp"
         android:text="@string/txt_nome_completo_registro"
         android:textStyle="bold"
+        android:textColor="@color/hint_color"
         />
 
     <EditText
         android:id="@+id/edit_nome_editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
+        android:background="@drawable/edit_text_background"
         android:padding="10dp"
         android:maxLines="1"
         android:hint="Nome Completo"
+        android:textColorHint="@color/hint_color"
+
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
@@ -66,15 +71,18 @@
         android:textSize="20sp"
         android:text="@string/txt_data_nascimento"
         android:textStyle="bold"
+        android:textColor="@color/hint_color"
         />
 
     <EditText
         android:id="@+id/edit_data_editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
+        android:background="@drawable/edit_text_background"
         android:padding="10dp"
         android:maxLines="1"
+        android:hint="2000/12/25"
+        android:textColorHint="@color/hint_color"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
@@ -91,16 +99,18 @@
         android:textSize="20sp"
         android:text="@string/txt_biografia"
         android:textStyle="bold"
+        android:textColor="@color/hint_color"
         />
 
     <EditText
         android:id="@+id/edit_bio_editar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
+        android:background="@drawable/edit_text_background"
         android:padding="10dp"
         android:maxLines="1"
         android:hint="teste1"
+        android:textColorHint="@color/hint_color"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
@@ -117,13 +127,14 @@
         android:textSize="20sp"
         android:text="@string/txt_pronomes"
         android:textStyle="bold"
+        android:textColor="@color/hint_color"
         />
 
     <Spinner
         android:id="@+id/spin_pronomes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/light_grey"
+        android:background="@drawable/edit_text_background"
         android:padding="10dp"
         android:spinnerMode="dropdown"
         android:maxLines="1"
@@ -135,7 +146,9 @@
         android:id="@+id/btn_editar_perfil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/pastel_orange"
         android:padding="15dp"
+        android:textColor="@color/hint_color"
         android:layout_marginStart="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginTop="20dp"
