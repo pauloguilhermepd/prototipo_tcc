@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +15,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
+import com.example.teste1.view.formcadastro.FormCadastro;
 import com.example.teste1.view.formregistro.FormRegistro;
 import com.example.teste1.view.telas_usuario.TelaPrincipal;
 import com.example.teste1.view.telas_usuario.TelaPerfil;
@@ -24,22 +26,30 @@ import retrofit2.*;
 
 public class TelaConfiguracoes extends AppCompatActivity {
     private Button btn_editar_perfil, btn_excluir_perfil;
+    private LinearLayout llt_editar, llt_excluir, llt_sair;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_configuracoes);
-        btn_editar_perfil = findViewById(R.id.btn_edit_perfil);
-        btn_excluir_perfil = findViewById(R.id.btn_excluir_perfil);
+        llt_editar = findViewById(R.id.llt_editar_perfil);
+        llt_excluir = findViewById(R.id.llt_excluir_perfil);
+        llt_sair = findViewById(R.id.llt_sair_perfil);
 
-        btn_editar_perfil.setOnClickListener(view -> {
+        llt_editar.setOnClickListener(view -> {
             Intent intent = new Intent(TelaConfiguracoes.this, TelaEditarPerfil.class);
             startActivity(intent);
             finish();
         });
 
-        btn_excluir_perfil.setOnClickListener(view -> {
-            new AlertDialog.Builder(TelaConfiguracoes.this).setTitle("Você deseja realmente excluir seu perfil?").setItems(new String[]{"Sim", "excluir", "Voltar"}, ((dialog, which) -> {
+        llt_sair.setOnClickListener(view -> {
+            Intent intent = new Intent(TelaConfiguracoes.this, FormCadastro.class);
+            startActivity(intent);
+            finish();
+        });
+
+        llt_excluir.setOnClickListener(view -> {
+            new AlertDialog.Builder(TelaConfiguracoes.this).setTitle("Você deseja realmente excluir seu perfil?").setItems(new String[]{"Sim", "Voltar"}, ((dialog, which) -> {
                         if(which == 0) {
                             ApiService api = ApiClient.getClient().create(ApiService.class);
                             FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();

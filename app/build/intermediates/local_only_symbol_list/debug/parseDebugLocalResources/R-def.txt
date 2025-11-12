@@ -8,9 +8,12 @@ color black
 color hint_color
 color light_grey
 color pastel_orange
+color red
 color white
+drawable background_dark_top
 drawable edit_text_background
 drawable ic_add
+drawable ic_avancar
 drawable ic_comment
 drawable ic_comment_white
 drawable ic_email
@@ -21,6 +24,7 @@ drawable ic_like_filled
 drawable ic_like_outline
 drawable ic_like_white
 drawable ic_lock
+drawable ic_voltar
 drawable icons8_engrenagem_filled24
 drawable icons8_engrenagem_filled48
 drawable icons8_engrenagem_outline24
@@ -43,10 +47,15 @@ id btn_entrar
 id btn_enviar_comentario
 id btn_excluir_perfil
 id btn_prosseguir
+id btn_sair_perfil
 id btn_salvar_edicao_publi
 id cim_configuracoes
+id cim_editar_perfil
+id cim_excluir_perfil
 id cim_foto_edit_perfil
 id cim_foto_perfil
+id cim_sair_perfil
+id cim_voltar
 id edit_bio_editar
 id edit_bio_registro
 id edit_data_editar
@@ -68,6 +77,9 @@ id img_autor_coment
 id img_editar_publicacao
 id img_publicacao
 id layout_acoes
+id llt_editar_perfil
+id llt_excluir_perfil
+id llt_sair_perfil
 id main
 id nav_home
 id nav_perfil

@@ -4,7 +4,17 @@
             "outputFile": "com.example.teste1.app-mergeDebugResources-49:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\conta\\.gradle\\caches\\8.13\\transforms\\1bb42bcd0a8543ae9bccb4ce311057cd\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "/home/paulo/.gradle/caches/8.13/transforms/6f57ac1a07f6f37042b2cb53cefa30f8/transformed/appcompat-1.6.1/res/values-v24/values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "/home/paulo/.gradle/caches/8.13/transforms/1bb42bcd0a8543ae9bccb4ce311057cd/transformed/media-1.0.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,17 +31,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\conta\\.gradle\\caches\\8.13\\transforms\\6f57ac1a07f6f37042b2cb53cefa30f8\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\conta\\.gradle\\caches\\8.13\\transforms\\fdcf29d239f2eb0d63cb49b192bf1188\\transformed\\material-1.12.0\\res\\values-v24\\values-v24.xml",
+                    "source": "/home/paulo/.gradle/caches/8.13/transforms/fdcf29d239f2eb0d63cb49b192bf1188/transformed/material-1.12.0/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",

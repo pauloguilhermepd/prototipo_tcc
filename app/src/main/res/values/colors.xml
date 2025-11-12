@@ -7,4 +7,5 @@
     <color name="pastel_orange">#A47864</color>
     <color name="background_grey">#848484</color>
     <color name="hint_color">#F0E7E4</color>
+    <color name="red">#FF0000</color>
 </resources>
