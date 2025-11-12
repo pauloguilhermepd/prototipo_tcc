@@ -4,6 +4,14 @@
         <item>Punk</item>
         <item>Cottage</item>
         <item>Casual</item>
+        <item>Sport</item>
+        <item>Streewear</item>
+        <item>Y2K</item>
+        <item>Minimalista</item>
+        <item>Gótico</item>
+        <item>Boho</item>
+        <item>Clássico</item>
+        <item>Glam</item>
     </string-array>
     <string-array name="lista_pronomes">
         <item>Ele/Dele</item>
@@ -17,6 +25,7 @@
     <color name="hint_color">#F0E7E4</color>
     <color name="light_grey">#BCB3B3</color>
     <color name="pastel_orange">#A47864</color>
+    <color name="red">#FF0000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">teste!</string>
     <string name="gcm_defaultSenderId" translatable="false">599750226943</string>

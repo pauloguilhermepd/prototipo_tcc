@@ -69,14 +69,14 @@ public class TelaConfiguracoes extends AppCompatActivity {
                                             if (task.isSuccessful()) {
                                                 Toast.makeText(TelaConfiguracoes.this, "Perfil excluído com sucesso", Toast.LENGTH_SHORT).show();
 
-                                                Intent intent = new Intent(TelaConfiguracoes.this, FormRegistro.class);
+                                                Intent intent = new Intent(TelaConfiguracoes.this, FormCadastro.class);
                                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                 startActivity(intent);
                                                 finish();
                                             } else {
                                                 Toast.makeText(TelaConfiguracoes.this, "Dados do perfil excluídos, mas falha ao excluir conta. Faça login novamente.", Toast.LENGTH_LONG).show();
                                                 FirebaseAuth.getInstance().signOut();
-                                                Intent intent = new Intent(TelaConfiguracoes.this, FormRegistro.class);
+                                                Intent intent = new Intent(TelaConfiguracoes.this, FormCadastro.class);
                                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                                 startActivity(intent);
                                                 finish();
