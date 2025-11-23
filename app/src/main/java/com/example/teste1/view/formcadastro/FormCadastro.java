@@ -6,6 +6,9 @@ import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.R;
 import com.example.teste1.databinding.ActivityFormCadastroBinding;
@@ -26,6 +29,13 @@ public class FormCadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_form_cadastro);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+
         binding = ActivityFormCadastroBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 

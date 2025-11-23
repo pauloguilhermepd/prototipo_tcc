@@ -64,7 +64,8 @@
             android:exported="false" />
         <activity
             android:name="com.example.teste1.TelaComentarios"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name="com.example.teste1.item_publicacao"
             android:exported="false" />

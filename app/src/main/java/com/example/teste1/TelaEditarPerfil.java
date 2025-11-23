@@ -20,6 +20,9 @@ import androidx.activity.EdgeToEdge;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.example.teste1.view.RespostasRegistros.RespostaBuscarUsuario;
@@ -45,7 +48,7 @@ import retrofit2.Response;
 
 public class TelaEditarPerfil extends AppCompatActivity {
 
-    private CircleImageView imgPerfil;
+    private CircleImageView imgPerfil, cim_voltar;
     private EditText txtNome, edit_data_aniversario, txtBio;
     private Button btn_editar;
     private ApiService apiService;
@@ -71,16 +74,28 @@ public class TelaEditarPerfil extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_editar_perfil);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+
         imgPerfil = findViewById(R.id.cim_foto_edit_perfil);
         txtNome = findViewById(R.id.edit_nome_editar);
         txtBio = findViewById(R.id.edit_bio_editar);
         Spinner spin_pronomes = findViewById(R.id.spin_pronomes);
         edit_data_aniversario = findViewById(R.id.edit_data_editar);
         btn_editar = findViewById(R.id.btn_editar_perfil);
+        cim_voltar = findViewById(R.id.cim_voltar);
         auth = FirebaseAuth.getInstance();
         String uid = auth.getCurrentUser().getUid();
         carregarPerfil(uid);
 
+        cim_voltar.setOnClickListener(view -> {
+            Intent intent = new Intent(TelaEditarPerfil.this, TelaPerfil.class);
+            startActivity(intent);
+            finish();
+        });
 
         ActivityResultLauncher<String> escolherImagem = registerForActivityResult(
                 new ActivityResultContracts.GetContent(),

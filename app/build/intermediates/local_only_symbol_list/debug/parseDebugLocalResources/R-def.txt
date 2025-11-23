@@ -11,6 +11,8 @@ color pastel_orange
 color red
 color white
 drawable background_dark_top
+drawable bg_tag_rounded
+drawable bg_tag_rounded_outline
 drawable edit_text_background
 drawable ic_add
 drawable ic_avancar
@@ -56,6 +58,9 @@ id cim_foto_edit_perfil
 id cim_foto_perfil
 id cim_sair_perfil
 id cim_voltar
+id container_stats
+id container_tags
+id divider_bio
 id edit_bio_editar
 id edit_bio_registro
 id edit_data_editar
@@ -89,6 +94,7 @@ id recycler_feed
 id recycler_publicacoes_perfil
 id spin_estilos
 id spin_pronomes
+id textView
 id tp_bio
 id tp_estilo
 id tp_nome
@@ -102,6 +108,7 @@ id txt_login
 id txt_num_curtidas
 id txt_texto_coment
 id txt_titulo_publi
+id view_capa
 layout activity_form_cadastro
 layout activity_form_estilo
 layout activity_form_login

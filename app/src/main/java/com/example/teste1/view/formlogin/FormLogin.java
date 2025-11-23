@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.R;
 import com.example.teste1.view.api.ApiClient;
@@ -38,7 +41,12 @@ public class FormLogin extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_form_login);
 
-        //Chamanda as views
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+
         TextView txtLinkCadastrar = findViewById(R.id.txt_link_cadastrar);
         TextView editEmailLogin = findViewById(R.id.edit_email_login);
         TextView editSenhaLogin = findViewById(R.id.edit_senha_login);

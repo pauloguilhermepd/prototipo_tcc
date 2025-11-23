@@ -14,6 +14,9 @@ import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.R;
 import com.example.teste1.view.api.ApiClient;
@@ -38,6 +41,11 @@ public class FormEstilo extends AppCompatActivity {
         EditText edt_subestilo = findViewById(R.id.edit_subestilo);
         Button btn_continuar = findViewById(R.id.btn_continuar);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
                 this,

@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -53,13 +56,19 @@ public class TelaPerfil extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_perfil);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+
         imgPerfil = findViewById(R.id.cim_foto_perfil);
         txtNome = findViewById(R.id.tp_nome);
         txtPronome = findViewById(R.id.tp_pronome);
         txtBio = findViewById(R.id.tp_bio);
         txtEstilo = findViewById(R.id.tp_estilo);
         txtSubestilo = findViewById(R.id.tp_subestilo);
-        imgConfig = findViewById(R.id.cim_configuracoes); //
+        imgConfig = findViewById(R.id.cim_configuracoes);
         recyclerPerfil = findViewById(R.id.recycler_publicacoes_perfil);
         recyclerPerfil.setLayoutManager(new LinearLayoutManager(this));
 

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".view.telas_usuario.TelaPrincipal"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/background_black">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_feed"

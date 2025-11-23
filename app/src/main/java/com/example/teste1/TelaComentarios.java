@@ -1,5 +1,6 @@
 package com.example.teste1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
@@ -7,6 +8,9 @@ import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,10 +19,13 @@ import com.example.teste1.view.adapters.ComentarioAdapter;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
 import com.example.teste1.view.models.Comentario;
+import com.example.teste1.view.telas_usuario.TelaPerfil;
+import com.example.teste1.view.telas_usuario.TelaPrincipal;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -26,6 +33,7 @@ import retrofit2.Response;
 public class TelaComentarios extends AppCompatActivity {
 
     private RecyclerView recyclerComentarios;
+    private CircleImageView cim_voltar;
     private ComentarioAdapter adapter;
     private EditText edtComentario;
     private Button btnEnviar;
@@ -37,14 +45,28 @@ public class TelaComentarios extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_comentarios);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+
         recyclerComentarios = findViewById(R.id.recycler_comentarios);
         edtComentario = findViewById(R.id.edt_comentario);
         btnEnviar = findViewById(R.id.btn_enviar_comentario);
+        cim_voltar = findViewById(R.id.cim_voltar);
+
 
         idPublicacao = getIntent().getIntExtra("id_publicacoes", -1);
         recyclerComentarios.setLayoutManager(new LinearLayoutManager(this));
 
         carregarComentarios();
+
+        cim_voltar.setOnClickListener(view -> {
+            Intent intent = new Intent(TelaComentarios.this, TelaPrincipal.class);
+            startActivity(intent);
+            finish();
+        });
 
         btnEnviar.setOnClickListener(v -> {
             String texto = edtComentario.getText().toString().trim();

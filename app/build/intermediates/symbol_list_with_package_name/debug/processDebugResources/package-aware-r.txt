@@ -3054,6 +3054,8 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable background_dark_top
+drawable bg_tag_rounded
+drawable bg_tag_rounded_outline
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -3384,6 +3386,8 @@ id confirmation_code
 id confirmation_code_layout
 id constraint
 id container
+id container_stats
+id container_tags
 id content
 id contentPanel
 id contiguous
@@ -3421,6 +3425,7 @@ id disableIntraAutoTransition
 id disablePostScroll
 id disableScroll
 id disjoint
+id divider_bio
 id dragAnticlockwise
 id dragClockwise
 id dragDown
@@ -3779,6 +3784,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3830,6 +3836,7 @@ id unlabeled
 id up
 id useLogo
 id vertical_only
+id view_capa
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner

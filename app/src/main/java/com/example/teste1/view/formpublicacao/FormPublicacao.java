@@ -26,13 +26,18 @@ import okhttp3.RequestBody;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.R;
+import com.example.teste1.TelaEditarPublicacao;
 import com.example.teste1.view.RespostasRegistros.RespostaRegistroPublicacao;
 import com.example.teste1.view.api.ApiClient;
 import com.example.teste1.view.api.ApiService;
 
 
+import com.example.teste1.view.telas_usuario.TelaPerfil;
 import com.example.teste1.view.telas_usuario.TelaPrincipal;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -46,6 +51,7 @@ import com.example.teste1.R;
 public class FormPublicacao extends AppCompatActivity {
 
     private Uri uriFotoSelecionada;
+    private CircleImageView cim_voltar;
     private String getRealPathFromURI(Uri uri) {
         String[] proj = {MediaStore.Images.Media.DATA};
         android.content.CursorLoader loader = new android.content.CursorLoader(this, uri, proj, null, null, null);
@@ -62,6 +68,19 @@ public class FormPublicacao extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_form_publicacao);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+
+        cim_voltar = findViewById(R.id.cim_voltar);
+        cim_voltar.setOnClickListener(view -> {
+            Intent intent = new Intent(FormPublicacao.this, TelaPerfil.class);
+            startActivity(intent);
+            finish();
+        });
 
         ImageView imgPreview = findViewById(R.id.img_publicacao);
         EditText edit_titulo = findViewById(R.id.edit_titulo_publi);

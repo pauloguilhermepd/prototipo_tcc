@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/paulo/prototipo_tcc/app/src/main/res/values-night/themes.xml",
+                    "source": "/home/paulo/FitMatch/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

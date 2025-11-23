@@ -20,6 +20,10 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/ic_home.xml"
     },
     {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_bg_tag_rounded_outline.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/bg_tag_rounded_outline.xml"
+    },
+    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_tela_editar_publicacao.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_tela_editar_publicacao.xml"
     },
@@ -62,6 +66,10 @@
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/layout_activity_tela_configuracoes.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_tela_configuracoes.xml"
+    },
+    {
+        "merged": "com.example.teste1.app-debug-51:/layout_activity_form_publicacao.xml.flat",
+        "source": "com.example.teste1.app-main-53:/layout/activity_form_publicacao.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_ic_like_white.xml.flat",
@@ -132,6 +140,10 @@
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/layout/activity_tela_principal.xml"
     },
     {
+        "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_bg_tag_rounded.xml.flat",
+        "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/drawable/bg_tag_rounded.xml"
+    },
+    {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/mipmap-anydpi-v26/ic_launcher.xml"
     },
@@ -142,10 +154,6 @@
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/xml_data_extraction_rules.xml.flat",
         "source": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-main-53:/xml/data_extraction_rules.xml"
-    },
-    {
-        "merged": "com.example.teste1.app-debug-51:/layout_activity_tela_configuracoes.xml.flat",
-        "source": "com.example.teste1.app-main-53:/layout/activity_tela_configuracoes.xml"
     },
     {
         "merged": "/home/paulo/.gradle/daemon/8.13/com.example.teste1.app-debug-51:/drawable_background_dark_top.xml.flat",

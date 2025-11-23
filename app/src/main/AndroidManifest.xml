@@ -30,6 +30,7 @@
             android:exported="false" />
         <activity
             android:name=".TelaComentarios"
+            android:windowSoftInputMode="adjustResize"
             android:exported="false" />
         <activity
             android:name=".item_publicacao"

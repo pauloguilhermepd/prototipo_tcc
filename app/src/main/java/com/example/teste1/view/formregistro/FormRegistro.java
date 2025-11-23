@@ -24,6 +24,9 @@ import okhttp3.RequestBody;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import com.example.teste1.R;
 import com.example.teste1.view.api.ApiClient;
@@ -64,6 +67,12 @@ public class FormRegistro extends AppCompatActivity {
         EditText edit_bio = findViewById(R.id.edit_bio_registro);
         Button btn_prosseguir = findViewById(R.id.btn_prosseguir);
         CircleImageView imgPreview = findViewById(R.id.cim_foto_perfil);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
 
         ActivityResultLauncher<String> escolherImagem = registerForActivityResult(
                 new ActivityResultContracts.GetContent(),

@@ -22,19 +22,33 @@ import com.example.teste1.view.telas_usuario.TelaPerfil;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.*;
 
 public class TelaConfiguracoes extends AppCompatActivity {
     private Button btn_editar_perfil, btn_excluir_perfil;
     private LinearLayout llt_editar, llt_excluir, llt_sair;
+    private CircleImageView cim_voltar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_configuracoes);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+        cim_voltar = findViewById(R.id.cim_voltar);
         llt_editar = findViewById(R.id.llt_editar_perfil);
         llt_excluir = findViewById(R.id.llt_excluir_perfil);
         llt_sair = findViewById(R.id.llt_sair_perfil);
+
+        cim_voltar.setOnClickListener(view -> {
+            Intent intent = new Intent(TelaConfiguracoes.this, TelaPerfil.class);
+            startActivity(intent);
+            finish();
+        });
 
         llt_editar.setOnClickListener(view -> {
             Intent intent = new Intent(TelaConfiguracoes.this, TelaEditarPerfil.class);

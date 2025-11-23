@@ -34,6 +34,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.io.File;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import okhttp3.MediaType;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -45,7 +46,7 @@ public class TelaEditarPublicacao extends AppCompatActivity {
     private ImageView imgPublicacao;
     private EditText editTitulo, editDescricao;
     private Button btnSalvar;
-
+    private CircleImageView cim_voltar;
     private Uri uriNovaFoto;
     private int idPublicacao;
     private String uid;
@@ -67,10 +68,22 @@ public class TelaEditarPublicacao extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_tela_editar_publicacao);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
+            Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(insets.left, insets.top, insets.right, insets.bottom);
+            return windowInsets;
+        });
+
         imgPublicacao = findViewById(R.id.img_editar_publicacao);
         editTitulo = findViewById(R.id.edit_titulo_editar);
         editDescricao = findViewById(R.id.edit_descricao_editar);
         btnSalvar = findViewById(R.id.btn_salvar_edicao_publi);
+        cim_voltar = findViewById(R.id.cim_voltar);
+        cim_voltar.setOnClickListener(view -> {
+            Intent intent = new Intent(TelaEditarPublicacao.this, TelaPerfil.class);
+            startActivity(intent);
+            finish();
+        });
 
         uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 

@@ -7,14 +7,14 @@
     android:layout_height="wrap_content"
     tools:context=".item_comentario"
     android:orientation="horizontal"
-    android:layout_marginTop="50dp"
+    android:layout_marginTop="20dp"
     android:background="@color/background_black">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_autor_coment"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/icons8_usuario_24"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/icons8_usuario_48"
         android:layout_marginEnd="8dp"/>
 
     <LinearLayout
