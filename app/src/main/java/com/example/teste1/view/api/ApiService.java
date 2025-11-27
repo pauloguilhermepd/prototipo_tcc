@@ -31,8 +31,6 @@ public interface ApiService {
     @GET("listar_publicacoes.php")
     Call<List<Publicacao>> listarPublicacoes(@Query("uid") String uid);
 
-    // ...
-
     @GET("listar_publicacoes_usuario.php")
     Call<List<Publicacao>> listarPublicacoesDoUsuario(
             @Query("uid") String uidPerfil,

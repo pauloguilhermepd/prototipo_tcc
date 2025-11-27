@@ -34,6 +34,7 @@ import com.example.teste1.view.api.ApiService;
 import com.example.teste1.view.formestilo.FormEstilo;
 
 import com.example.teste1.view.RespostasRegistros.RespostaRegistroPerfil;
+import com.example.teste1.view.mascaraData;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -67,6 +68,8 @@ public class FormRegistro extends AppCompatActivity {
         EditText edit_bio = findViewById(R.id.edit_bio_registro);
         Button btn_prosseguir = findViewById(R.id.btn_prosseguir);
         CircleImageView imgPreview = findViewById(R.id.cim_foto_perfil);
+
+        edit_data_aniversario.addTextChangedListener(mascaraData.mask(edit_data_aniversario, "####-##-##"));
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, windowInsets) ->{
             Insets insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars());

@@ -85,16 +85,16 @@
         android:id="@+id/edit_data_registro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/edit_text_background"
-        android:padding="10dp"
-        android:maxLines="1"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         android:autofillHints="name"
-        android:inputType="date"
-        />
+        android:background="@drawable/edit_text_background"
+        android:inputType="number"
+        android:maxLines="1"
+        android:maxLength="10"
+        android:padding="10dp" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -124,7 +124,7 @@ public class FormPublicacao extends AppCompatActivity {
 
 
                 ApiService api = ApiClient.getClient().create(ApiService.class);
-                Call<RespostaRegistroPublicacao> call = api.registrarPublicacao(uidBody, tituloBody, descricaoBody, imagem_publi);
+                Call<RespostaRegistroPublicacao> call = api.registrarPublicacao(uidBody, descricaoBody, tituloBody, imagem_publi);
 
 
                 call.enqueue(new Callback<RespostaRegistroPublicacao>() {
